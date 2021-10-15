@@ -1,0 +1,33 @@
+<section>
+  <h1>Сказки со всей<br>России в одном месте</h1>
+  <div class="img_content">
+    <div class="images_left">
+      <div class="quote1">
+        <%=  image_tag("quote1.svg") %>
+      </div>
+      <div class="img1">
+        <%=  image_tag("group1.png") %>
+      </div>
+    </div>
+    <div class="imqges_right">
+      <div class="quote2">
+        <%=  image_tag("quote2.svg") %>
+      </div>
+      <div class="img2">
+        <%=  image_tag("group2.png") %>
+      </div>
+    </div>
+  </div>
+
+</section>
+<section>
+  <p>Ларец — это интерактивный сборник народных сказок, с помощью которого можно узнать больше о культуре населяющих Россию народов и сформировать свое представление о национальной идентичности.</p>
+</section>
+<section>
+  <header>
+    <h4><%= link_to "ЛАРЕЦ", promo_path %></h4>
+    <h4><%= link_to "О нас", about_path %></h4>
+  </header>
+  <h1 class="subscribe">Не пропусти<br>запуск сервиса!</h1>
+  <%= render "subscribers/form" %>
+</section>
