@@ -1,33 +1,38 @@
 <p id="notice"><%= notice %></p>
 
-<p>
- <strong>Author:</strong>
- <%= @post.author %>
-</p>
+<section class="postbody">
+  <div class="postlinks">
+    <div class="edition">
+      <%= link_to 'Редактировать', edit_post_path(@post) %>
+    </div>
+    <div class="back">
+      <%= link_to 'Назад', posts_path %>
+    </div>
+  </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @post.name %>
-</p>
+  <div class="allcontent">
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+    <h3 class="name">
+      <%= @post.name %>
+    </h3>
+    <!-- <h3>
+     <%= @post.author %>
+    </h3> -->
+    <h3 class="title">
+      <%= @post.title %>
+    </h3>
 
-<%= image_tag(@post.image.url, alt: 'Image') if @post.image? %>
-<%= link_to(image_tag(@post.image.thumb.url, alt: 'Image'), @post.image.url, target: '_blank') if @post.image? %>
+    <div class="skazka">
+      <%= @post.content.html_safe %>
+    </div>
+  </div>
+</section>
+<!-- 
+<div class="comments">
+  <h2>Comments</h2>
+  <%= render @post.comments %>
 
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
+  <h2>Add a comment:</h2>
+  <%= render "comments/form" %>
 
-<h2>Comments</h2>
-<%= render @post.comments %>
-
-<h2>Add a comment:</h2>
-<%= render "comments/form" %>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+</div> -->

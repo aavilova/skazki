@@ -1,31 +1,36 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+<div class="head">
+  <h1>Сказки</h1>
+  <div class="link">
+    <%= link_to 'Новый пост', new_post_path %>
+  </div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Title</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @posts.each do |post| %>
+<section class="postsection">
+  <table>
+    <thead>
       <tr>
-        <td><%= post.name %></td>
-        <td><%= post.title %></td>
-        <td><%= post.content %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Название</th>
+        <th>Народность</th>
+        <th>Автор</th>
+        <th>Сказка</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+    <tbody>
+      <% @posts.each do |post| %>
+        <tr>
+          <td><%= post.name %></td>
+          <td><%= post.title %></td>
+          <td><%= post.author %></td>
+          <td><%= post.content.html_safe %></td>
+          <td><div class="open"><%= link_to 'Открыть', post %></div></td>
+          <td><div class="edit"><%= link_to 'Редактировать', edit_post_path(post) %></div></td>
+          <td><div class="delete"><%= link_to 'Удалить', post, method: :delete, data: { confirm: 'Вы уверены?' } %></div></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</section>

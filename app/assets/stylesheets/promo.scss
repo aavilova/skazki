@@ -17,40 +17,49 @@ body {
   font-family: 'Proxima Nova';
   margin: 0;
 }
-
-body, section:nth-last-of-type(3) {
+.three, .one {
   background-color: $red;
 }
-section:nth-last-of-type(1){
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-}
-section:nth-last-of-type(2){
+.two{
   background-color: $black;
-  width: 100vw;
-  height: 120vh;
-  margin-top: -20vh;
-  position: relative;
-  border-radius: 4.861vw;
-  z-index: 2;
+  display: flex;
+  flex-direction: row;
 }
-section:nth-last-of-type(3){
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  border-radius: 4.861vw;
-  z-index: 3;
+.main{
+  margin-top: 3vw;
 }
+
 section {
   overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
   a {
     text-decoration: none;
-    color: $black;
+    color: inherit;
   }
-  h1{
+  .descr {
+    position: relative;
+    z-index: 5;
+    h1{
+      color: $white;
+      font-size: 16.667vw;
+      line-height: 100%;
+      font-weight: 800;
+      margin-left: $margin;
+      margin-top: -$margin *8;
+    }
+    h3 {
+      font-size: 2.6vw;
+      color: $white;
+      margin-left: $margin * 1.05;
+      margin-top: -$margin *3.8;
+      font-weight: 600;
+    }
+  }
+  h2{
     margin: $left-margin;
-    color: $white;
+    color: $black;
     font-size: 7.361vw;
     line-height: 90%;
     font-weight: 800;
@@ -59,38 +68,41 @@ section {
     display: inline-block;
   }
   .subscribe{
-    color: $black;
     margin-top: $margin * 2;
   }
-  p{
+  .larets{
     color: $white;
     font-size: 2.222vw;
     line-height: 115%;
-    width: 39.931vw;
+    width: 39vw;
     font-weight: 400;
+    margin-left: -$margin * 8.2;
+    margin-top: $margin * 5.2;
   }
   header{
     width: 100vw;
-    height: 120px;
+    height: 4.167vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
     h4{
       font-size: 2.222vw;
-      line-height: 120%;
+      line-height: 80%;
       text-align: center;
       color: $black;
       margin-left: $margin;
       margin-right: $margin;
-      margin-top: $margin;
-      font-weight: 800;
+      font-weight: 700;
     }
   }
   form {
     width: 45.139vw;
     height: 4.861vw;
     margin-left: $margin;
-    margin-top: $margin;
+    margin-top: -1vw;
     background: $black;
     border-radius: 3.264vw;
     border: none;
@@ -100,7 +112,7 @@ section {
 
     input[type="email"] {
       @include back;
-      font-size: 1.667vw;
+      font-size: 1.5vw;
       line-height: 100%;
       color: rgba(236, 225, 207, 0.7);
       margin: $form_margin;
@@ -124,46 +136,107 @@ section {
       cursor: pointer;
     }
   }
-  .img_content{
+  .images{
     display: flex;
     flex-direction: row;
-    .quote1{
-      margin-left: 22vw;
-      margin-top: $margin * 3;
+    justify-content: space-between;
+    z-index: 2;
+    .c1{
+      margin-left: -$margin * 2;
+      margin-top: -$margin * .5;
       img{
-        height: 6.806vw;
-        width: auto;
-        display: inline-block;
+        width: 41.667vw;
+        height: auto;
       }
     }
-    .quote2{
-      margin-left: $margin * 2;
-      margin-top: $margin * 3.6;
-      z-index: 5;
-      position: relative;
-        img{
-          height: 6.806vw;
-          width: auto;
-          display: inline-block;
-        }
-    }
-    .img1{
-      margin-top: -$margin * 1.3;
+    .quote1 {
+      margin-top: $margin * 3.5;
+      margin-left: -$margin * 2;
       img{
-        height: 30vw;
-        width: auto;
-        display: inline-block;
+        width: 26.736vw;
+        height: auto;
       }
     }
-    .img2{
-      margin-left: $margin * 4.5;
-      margin-top: -$margin * 4.9;
+    .quote2 {
+      margin-left: -$margin;
+      margin-top: $margin * 5.8;
       img{
-        height: 40vw;
-        width: auto;
-        display: inline-block;
+        width: 30vw;
+        height: auto;
+      }
+    }
+    .c2{
+      img{
+        margin-left: -$margin * 4;
+        margin-top: $margin * 4;
+        width: 41.667vw;
+        height: auto;
       }
     }
   }
-
+  .c_3{
+    img{
+      width: 44vw;
+      height: auto;
+      margin-top: $margin * 3;
+      margin-left: $margin * .5;
+    }
+  }
+  .quote3{
+    img{
+      width: 41.042vw;
+      height: auto;
+      margin-top: $margin * 3;
+      margin-left: -$margin * 1.4;
+    }
+  }
+  .quote4{
+    margin-top: 2vw;
+    margin-left: 38.5vw;
+    margin-bottom: .7vw;
+    img{
+      width: 41.042vw;
+      height: auto;
+    }
+  }
+  .opacity{
+    opacity: 0;
+    transition: .5s;
+  }
+  .quote4_a{
+    top: 24.5vw;
+    margin-left: 38.5vw;
+    margin-bottom: .7vw;
+    position: absolute;
+    z-index: 10;
+    opacity: 0;
+    img{
+      width: 41.042vw;
+      height: auto;
+    }
+  }
+  .opacity_a{
+    opacity: 1;
+    transition: .5s;
+  }
+  .down{
+    margin-top: -1vw;
+    margin-left: $margin;
+    display: flex;
+    flex-direction: row;
+    .icons{
+      margin-top: 16vw;
+      img{
+        margin-right: 1.389vw;
+      }
+    }
+    .c_4{
+      margin-left: 52vw;
+      margin-top: -8vw;
+      img{
+        width: 28vw;
+        height: auto;
+      }
+    }
+  }
 }

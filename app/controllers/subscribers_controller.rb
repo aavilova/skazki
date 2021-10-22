@@ -5,11 +5,11 @@ class SubscribersController < ApplicationController
 
   def create
     @subscriber = Subscriber.new(subscriber_params)
-    if @subscriber.save
-      redirect_to about_path, notice: "Ура!"
-    else
-      redirect_to about_path, notice: "Не ура("
-    end
+    # if @subscriber.save
+    #   redirect_to about_path, notice: "Ура!"
+    # else
+    #   redirect_to about_path, notice: "Не ура("
+    # end
   end
 
   private

@@ -1,2 +1,134 @@
-<h1>About#index</h1>
-<p>Find me in app/views/about/index.html.erb</p>
+<section class="first">
+  <div class="mainpage">
+    <h1>ЛАРЕЦ</h1>
+    <h3>Интерактивный сборник народных сказок</h3>
+  </div>
+</section>
+<section class="second">
+   <div class="textblock2">
+     <h2 class="blackhead">Концепция</h2>
+     <p class="about">Ларец — это&nbsp;интерактивный сборник народных сказок с&nbsp;комментариями и&nbsp;словарем важных понятий из&nbsp;языка исследуемых этнокультурных меньшинств, который&nbsp;может стать помощником в&nbsp;поиске своей национальной идентичности и&nbsp;сохранении культуры малых народов России.</p>
+   </div>
+</section>
+<section class="third">
+  <div class="pics3">
+    <div class="quote_3">
+      <%= image_tag "quote3.svg" %>
+    </div>
+    <div class="c_3">
+      <%= image_tag "character5.png" %>
+    </div>
+  </div>
+</section>
+<section class="forth">
+  <div class="textblock4">
+    <h2 class="blackhead">Целевая<br>аудитория</h2>
+    <p class="define">Наш проект&nbsp;для людей, желающих больше узнать о&nbsp;культуре своего народа, изучить его идентичность, а&nbsp;также для&nbsp;всех кто хочет провести время с&nbsp;удовольствием и&nbsp;пользой, узнать что-то новое или&nbsp;просто насладиться сказками.</p>
+  </div>
+</section>
+<section class="fifth">
+  <div class="pics5">
+    <div class="c5">
+      <%= image_tag "character1.png" %>
+    </div>
+    <div class="quote5">
+      <%= image_tag "quote5.svg" %>
+    </div>
+  </div>
+</section>
+<section class="sixth">
+  <div class="textblock6">
+    <h2 class="whitehead">Выводы<br>из&nbsp;исследования</h2>
+    <p class="statistic">Больше 80%&nbsp;из&nbsp;250 опрошенных человек хотели&nbsp;бы&nbsp;узнать больше о&nbsp;народах, населяющих территорию России.</p>
+    <h6>Вопрос:</h6>
+    <p class="question">Хотели&nbsp;бы&nbsp;вы узнавать больше о&nbsp;народах,<br>населяющих территорию России?</p>
+    <div class="answers">
+      <div class="yes">
+        <div class="form1"></div>
+        <div class="txt">
+          Да
+        </div>
+      </div>
+      <div class="no">
+        <div class="form2"></div>
+        <div class="txt">
+          Нет
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="seventh">
+  <h2 class="blackhead">Анализ<br>конкурентов</h2>
+  <div class="pics7">
+    <div class="quote7">
+      <%= image_tag "quote7.svg" %>
+    </div>
+    <div class="c7">
+      <%= image_tag "character2.png" %>
+    </div>
+  </div>
+</section>
+<section class="eighth">
+  <div class="textblock8">
+    <h2 class="whitehead">Фичи<br>сервиса</h2>
+    <div class="list">
+        <ul>
+          <li>Библиотека контента</li>
+          <li>Рекомендации</li>
+          <li>Избранное</li>
+          <li>Составление личных подборок</li>
+        </ul>
+        <ul>
+          <li>Комментирование</li>
+          <li>Поиск</li>
+          <li>Коллекции</li>
+          <li>Фильтры</li>
+        </ul>
+    </div>
+  </div>
+</section>
+<section class="three">
+  <header>
+    <h4></h4>
+    <h4><%= link_to "Блог", posts_path %></h4>
+  </header>
+  <h2 class="subscribe">Не пропустите<br>запуск сервиса!</h2>
+  <div class="main">
+    <div class="quote4">
+      <%= image_tag "quote4.svg" %>
+    </div>
+    <div class="quote4_a">
+      <%= image_tag "quote4a.svg" %>
+    </div>
+    <%= render "subscribers/form" %>
+  </div>
+  <div class="down">
+    <div class="icons">
+      <%= image_tag "icon1.svg" %>
+      <%= image_tag "icon2.svg" %>
+      <%= image_tag "icon3.svg" %>
+    </div>
+    <div class="c_4">
+        <%= image_tag "character4.png" %>
+    </div>
+  </div>
+</section>
+<section class="ninth">
+  <footer>
+    <div class="people">
+      <div class="authors">
+        <h5>Над проектом работали:</h5>
+        <p class="names">Алиса-Анастасия Авилова<br>Анастасия Михалькова<br>Елизавета Коркунова</p>
+      </div>
+      <div class="curator">
+        <h5>Куратор:</h5>
+        <p class="names">Вадим Булгаков</p>
+      </div>
+    </div>
+    <div class="year">
+      <p class="years">HSE ADC</p>
+      <p class="years">2021</p>
+    </div>
+  </footer>
+</section>
