@@ -3,7 +3,9 @@
 <section class="postbody">
   <div class="postlinks">
     <div class="edition">
-      <%= link_to 'Редактировать', edit_post_path(@post) %>
+      <% if user_signed_in? && current_user.isadmin == true %>
+        <%= link_to 'Редактировать', edit_post_path(@post) %>
+      <% end %>
     </div>
     <div class="back">
       <%= link_to 'Назад', posts_path %>
@@ -27,12 +29,42 @@
     </div>
   </div>
 </section>
-<!-- 
+
+<div class="favs">
+  <% if user_signed_in? %>
+  <% pre_like = @post.likes.find { |like| like.user_id == current_user.id} %>
+
+  <% if pre_like %>
+    <%= button_to ' Дизлайк ', post_like_path(@post, pre_like), method: :delete %>
+  <% else %>
+    <%= button_to post_likes_path(@post), method: :post do %>
+      <i class="fa fa-user-plus"></i> Link Name
+    <% end %>
+
+    <%= button_to '<i>aaa</i>'.html_safe, post_likes_path(@post), method: :post %>
+  <% end %>
+  <p class="likes_amount"><%= @post.likes.count %> <%= (@post.likes.count) == 1 ? '' : ''%></p>
+
+  <% pre_favorite = @post.favorites.find { |favorite| favorite.user_id == current_user.id} %>
+  <% if pre_favorite %>
+      <%= button_to ' В избранном ', post_favorite_path(@post, pre_favorite), method: :delete %>
+  <% else %>
+      <%= button_to ' В избранное ', post_favorites_path(@post), method: :post %>
+  <% end %>
+  <% else %>
+  <p class="likes_amount"><%= @post.likes.count %> <%= (@post.likes.count) == 1 ? 'Лайк' : 'Лайка'%></p>
+  <% end %>
+
+</div>
+
 <div class="comments">
-  <h2>Comments</h2>
+  <h2>Комментарии</h2>
   <%= render @post.comments %>
 
-  <h2>Add a comment:</h2>
+  <h2>Добавить комментарий:</h2>
+  <% if user_signed_in? %>
   <%= render "comments/form" %>
-
-</div> -->
+  <% else %>
+    <p>Please <%= link_to 'login', new_user_session_path %> or <%= link_to 'register', new_user_registration_path %> to comment.</p>
+  <% end %>
+</div>

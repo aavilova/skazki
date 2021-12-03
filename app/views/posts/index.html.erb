@@ -2,9 +2,11 @@
 
 <div class="head">
   <h1>Сказки</h1>
-  <div class="link">
-    <%= link_to 'Новый пост', new_post_path %>
-  </div>
+  <% if user_signed_in? && current_user.isadmin == true %>
+    <div class="link">
+      <%= link_to 'Новый пост', new_post_path %>
+    </div>
+  <% end %>
 </div>
 
 <section class="postsection">
@@ -26,9 +28,19 @@
           <td><%= post.title %></td>
           <td><%= post.author %></td>
           <td><%= post.content.html_safe %></td>
+          <td><%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%></td>
+          <td><%= post.comments.count %> <%= (post.comments.count) == 1 ? 'Comment' : 'Commentes'%></td>
           <td><div class="open"><%= link_to 'Открыть', post %></div></td>
-          <td><div class="edit"><%= link_to 'Редактировать', edit_post_path(post) %></div></td>
-          <td><div class="delete"><%= link_to 'Удалить', post, method: :delete, data: { confirm: 'Вы уверены?' } %></div></td>
+          <td>
+            <% if user_signed_in? && current_user.isadmin == true %>
+              <div class="edit"><%= link_to 'Редактировать', edit_post_path(post) %></div>
+            <% end %>
+          </td>
+          <td>
+            <% if user_signed_in? && current_user.isadmin == true %>
+              <div class="delete"><%= link_to 'Удалить', post, method: :delete, data: { confirm: 'Вы уверены?' } %></div>
+            <% end %>
+          </td>
         </tr>
       <% end %>
     </tbody>

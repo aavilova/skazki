@@ -56,7 +56,7 @@ body{
       margin-bottom: 0;
     }
     .title{
-      font-size: 18px;
+      font-size: 1.071vw;
       font-weight: 600;
       color: grey;
       margin-top: 0;
@@ -64,15 +64,15 @@ body{
     .skazka{
       width: 60vw;
       height: auto;
-      margin-top: 45px;
-      font-size: 20px;
+      margin-top: 2.679vw;
+      font-size: 1.190vw;
       font-weight: 400;
     }
   }
 }
-// .comments{
-//   margin: $left-margin;
-// }
+.comments{
+  margin-left: 8.334vw;
+}
 .head{
   margin: $left-margin;
   h1{
@@ -100,6 +100,7 @@ body{
   }
 }
 .postsection{
+  margin-top: 2vw;
   width: 100vw;
   height: auto;
   background: #fff;
@@ -173,5 +174,35 @@ body{
         }
       }
     }
+  }
+}
+.favs{
+  margin-left: 8.334vw;
+  display: flex;
+  flex-direction: row;
+  margin-top: 2vw;
+  margin-bottom: 5.5vw;
+  .likes_amount{
+    margin-top: .5vw;
+    margin-bottom: 0;
+    margin-left: .5vw;
+    margin-right: 1.5vw;
+    font-family: 'Proxima Nova';
+    font-size: 1.190vw;
+    font-weight: 600;
+  }
+  input, button{
+    width: 100%;
+    padding: auto .8vw;
+    height: 2.381vw;
+    border-radius: 2.679vw;
+    background: #000;
+    font-family: 'Proxima Nova';
+    font-size: 1.190vw;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    margin-right: 1vw;
+    cursor: pointer;
   }
 }

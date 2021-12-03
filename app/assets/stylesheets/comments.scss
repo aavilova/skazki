@@ -1,3 +1,78 @@
 // Place all the styles related to the Comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.full_comment{
+  display: flex;
+  flex-direction: row;
+  .field_body{
+    width: 15.5vw;
+    height: 2.381vw;
+    background: #bbb;
+    margin-right: .8vw;
+    border-radius: 3.264vw;
+    margin-bottom: 3.5vw;
+    textarea{
+      color: #444;
+      margin-left: 1.5vw;
+      height: 2.381vw;
+      font-size: 1vw;
+      background: #bbb;
+      font-family: 'Proxima Nova';
+      font-weight: 600;
+      border: none;
+      resize: none;
+      -webkit-appearence: none;
+    }
+    textarea:focus{
+      outline-width: 0;
+      outline: none;
+      appearance: none;
+      -webkit-appearance: none;
+      -webkit-writing-mode: none ;
+    }
+  }
+  .actions_create{
+    input[type="submit"]{
+      font-family: 'Proxima Nova';
+      font-size: 1.190vw;
+      font-weight: 600;
+      color: #fff;
+      font-weight: 600;
+      width: 8.5vw;
+      height: 2.381vw;
+      border-radius: 2.679vw;
+      background: #000;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+.username{
+  color: #000;
+  font-weight: 600;
+  font-family: 'Proxima Nova';
+  font-size: 1.190vw;
+  margin-bottom: 0;
+}
+.commentbody{
+  color: #444;
+  font-weight: 600;
+  font-family: 'Proxima Nova';
+  font-size: 1vw;
+  margin-top: .5vw;
+}
+.commentdelete{
+  width: 5.5vw;
+  height: 1.7vw;
+  border-radius: 2.679vw;
+  background: #444;
+  display: flex;
+  justify-content: center;
+  a{
+    font-size: .9vw;
+    margin-top: .3vw;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+  }
+}

@@ -1,9 +1,12 @@
 class Post < ApplicationRecord
+  belongs_to :user
   validates :name, :presence => true
   validates :author, :presence => true
   validates :title, :presence => true,
            :length => { :minimum => 1 }
 
   has_many :comments, :dependent => :destroy
+  has_many :likes, dependent: :destroy
+  has_many :favorites, dependent: :destroy
   # mount_uploader :image, ImageUploader
 end
