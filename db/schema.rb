@@ -52,12 +52,6 @@ ActiveRecord::Schema.define(version: 2021_12_03_092546) do
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
-  create_table "roles", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "subscribers", force: :cascade do |t|
     t.string "email"
     t.datetime "created_at", precision: 6, null: false

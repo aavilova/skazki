@@ -21,10 +21,11 @@ class PostsController < ApplicationController
   def edit
   end
 
+
   # POST /posts or /posts.json
   def create
     @post = Post.new(post_params.merge(user_id: current_user.id))
-    
+
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: "Post was successfully created." }
@@ -70,5 +71,8 @@ class PostsController < ApplicationController
     # end
     def post_params
 	     params.require(:post).permit(:name, :title, :author, :content)
+    end
+    def filtering_params(params)
+      params.slice(:user, :category, :starts_with)
     end
 end

@@ -22,6 +22,6 @@ end
  get 'promo', to: 'promo#index'
  get 'about', to: 'about#index'
 
- root 'promo#index'
+ root 'posts#index'
 
 end
