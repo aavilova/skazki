@@ -1,11 +1,11 @@
-<section class="postssection">
+<section class="postbody">
 
 
   <% if user_signed_in? && current_user.isadmin == true %>
     <div class="admin_panel">
       <div class="all_links">
         <div class="chosen">
-          <%= link_to 'Все посты', posts_path %>
+          <%= link_to 'Посты', posts_path %>
         </div>
         <%= link_to 'Архив'%>
         <%= link_to 'Подборки'%>
@@ -14,10 +14,12 @@
     </div>
   <% end %>
   <div class="newpost">
-    <%= render 'form', post: @post %>
-
-    <%= link_to '< К постам', posts_path %>
-
+    <div class="back">
+      <%= link_to 'Назад', posts_path %>
+    </div>
+    <div class="postform">
+      <%= render 'form', post: @post %>
+    </div>
   </div>
 
 </section>

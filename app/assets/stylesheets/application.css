@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= stub admin
  */
 @font-face {
    font-family: 'ProximaNova';
@@ -48,4 +49,34 @@
   margin: 0 3.472vw;
   font-size: 1.059vw;
   font-weight: 600;
+}
+
+/* apppers ony if user logged in as an admin */
+.admin_panel{
+  width: 19.236vw;
+  height: auto;
+  background: #fff;
+}
+.all_links{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  margin-top: 8.681vw;
+  margin-left: 1.736vw;
+}
+.all_links a{
+  font-size: 1.528vw;
+  font-weight: 600;
+  margin-bottom: 2.292vw;
+  padding-left: 1.736vw;
+}
+.chosen{
+  width: 15.694vw;
+  height: 2.778vw;
+  background: #E5E5E5;
+  border-radius: 0.417vw;
+  margin-bottom: 1.875vw;
+}
+.chosen a{
+  line-height: 2.778vw;
 }

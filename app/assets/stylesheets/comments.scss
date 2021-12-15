@@ -1,78 +1,98 @@
 // Place all the styles related to the Comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.full_comment{
+
+.comments{
+  margin-top: 3.5vw;
+  margin-left: 0;
   display: flex;
-  flex-direction: row;
-  .field_body{
-    width: 15.5vw;
-    height: 2.381vw;
-    background: #ccc;
-    margin-right: .8vw;
-    border-radius: 3.264vw;
-    margin-bottom: 3.5vw;
-    textarea{
-      color: #444;
-      margin-left: 1.5vw;
-      height: 2.381vw;
-      font-size: 1vw;
-      background: #ccc;
-      font-family: 'Proxima Nova';
-      font-weight: 600;
-      border: none;
-      resize: none;
-      -webkit-appearence: none;
-    }
-    textarea:focus{
-      outline-width: 0;
-      outline: none;
-      appearance: none;
-      -webkit-appearance: none;
-      -webkit-writing-mode: none;
-    }
+  flex-direction: column;
+  margin-bottom: 3.5vw;
+  h2{
+    margin-top: 0;
+    margin-left: 0;
+    font-size: 2.083vw;
   }
-  .actions_create{
-    input[type="submit"]{
-      font-family: 'Proxima Nova';
-      font-size: 1.190vw;
+  .username{
+    color: #000;
+    font-weight: 600;
+    font-family: 'Proxima Nova';
+    font-size: 1.190vw;
+    margin-bottom: 0;
+  }
+  .commentbody{
+    color: #444;
+    font-weight: 600;
+    font-family: 'Proxima Nova';
+    font-size: 1vw;
+    margin-top: .5vw;
+  }
+  .commentdelete{
+    width: 5.5vw;
+    height: 1.7vw;
+    border-radius: 2.679vw;
+    background: #444;
+    display: flex;
+    justify-content: center;
+    a{
+      font-size: .9vw;
+      margin-top: .3vw;
       font-weight: 600;
       color: #fff;
-      font-weight: 600;
-      width: 8.5vw;
-      height: 2.381vw;
-      border-radius: 2.679vw;
-      background: #000;
-      border: none;
-      cursor: pointer;
+      text-decoration: none;
     }
   }
-}
-.username{
-  color: #000;
-  font-weight: 600;
-  font-family: 'Proxima Nova';
-  font-size: 1.190vw;
-  margin-bottom: 0;
-}
-.commentbody{
-  color: #444;
-  font-weight: 600;
-  font-family: 'Proxima Nova';
-  font-size: 1vw;
-  margin-top: .5vw;
-}
-.commentdelete{
-  width: 5.5vw;
-  height: 1.7vw;
-  border-radius: 2.679vw;
-  background: #444;
-  display: flex;
-  justify-content: center;
-  a{
-    font-size: .9vw;
-    margin-top: .3vw;
-    font-weight: 600;
-    color: #fff;
-    text-decoration: none;
+  .commentform{
+    form{
+      margin: 0;
+      background: none;
+      label{
+        color: #444;
+        font-size: .9vw;
+        font-weight: 600;
+        display: flex;
+        margin-bottom: 0.4vw;
+        margin-top: 1.3vw;
+      }
+      .full_comment{
+        display: flex;
+        flex-direction: row;
+        .field_body{
+          .comment_body{
+            display: flex;
+            flex-direction: column;
+            textarea{
+              color: #444;
+              border-radius: 3.264vw;
+              margin-left: 0;
+              padding: .5vw 1vw;
+              height: 2.381vw;
+              width: 20vw;
+              font-size: 1vw;
+              background: #ccc;
+              font-family: 'Proxima Nova';
+              font-weight: 600;
+              border: none;
+              resize: auto;
+              -webkit-appearence: none;
+            }
+          }
+        }
+        .actions_create{
+          input[type="submit"]{
+            width: 2.381vw;
+            height: 2.381vw;
+            background: {
+               image: asset_url("arrow.svg");
+            }
+            background-size: 100%;
+            margin-top: 2.8vw;
+            margin-left: .5vw;
+          }
+        }
+      }
+    }
   }
+
+
 }

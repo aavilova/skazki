@@ -1,5 +1,6 @@
+
+
 $black: #000;
-$left-margin: 4.167vw 0 0 4.167vw;
 $margin: 4.167vw;
 
 body{
@@ -7,232 +8,195 @@ body{
   font-family: 'Proxima Nova';
 }
 
-// page with all posts
-// .postssection{
-//   display: flex;
-//   flex-direction: row;
-//   .admin_panel{
-//     width: 19.236vw;
-//     height: 100%;
-//     background: #fff;
-//     .all_links{
-//       display: flex;
-//       flex-direction: column;
-//       margin-top: 8.681vw;
-//       margin-left: 1.736vw;
-//       position: fixed;
-//       a{
-//         font-size: 1.528vw;
-//         font-weight: 600;
-//         margin-bottom: 2.292vw;
-//         padding-left: 1.736vw;
-//       }
-//       .chosen{
-//         width: 15.694vw;
-//         height: 2.778vw;
-//         background: #E5E5E5;
-//         border-radius: 0.417vw;
-//         margin-bottom: 1.875vw;
-//         a{
-//           line-height: 2.778vw;
-//         }
-//       }
-//     }
-//   }
-//   .content_for_all{
-//     width: 80.764vw;
-//     .head_button, .postsection{
-//       width: 73.750vw;
-//       margin-left: 3.472vw;
-//     }
-//     .head_button{
-//       margin-top: 9vw;
-//       .link_newpost{
-//         width: 13.194vw;
-//         height: 3.472vw;
-//         background: $black;
-//         border-radius: 6.944vw;
-//         text-align: center;
-//         a{
-//           color: white;
-//           font-size: 1.528vw;
-//           font-weight: 600;
-//           line-height: 3.472vw;
-//
-//         }
-//       }
-//     }
-//     .postsection{
-//       margin-top: 2.292vw;
-//       .list_head{
-//         display: flex;
-//         flex-direction: row;
-//         width: 73.750vw;
-//         height: auto;
-//         background: #ddd;
-//         border-radius: 0.417vw;
-//         margin-bottom: 2.222vw;
-//         div{
-//           p{
-//             font-size: 1.111vw;
-//             line-height: 1.319vw;
-//             font-weight: 600;
-//             padding: 17px 42px;
-//             margin: 0;
-//           }
-//         }
-//       }
-//       .list_body{
-//         display: flex;
-//         flex-direction: row;
-//         width: 73.750vw;
-//         height: auto;
-//         background: #fff;
-//         border-radius: 0.417vw;
-//         margin-bottom: 1.042vw;
-//         transition: .5s;
-//         .button_to_links{
-//           position: absolute;
-//           z-index: 15;
-//           left: 71.250vw;
-//           border-top: 1.181vw;
-//           width: .87vw;
-//           height: 0.208vw;
-//           background: {
-//              image: asset_url("dots.svg");
-//           }
-//         }
-//         .linksinside{
-//           width: auto;
-//           height: auto;
-//           a{
-//             font-size: 0.972vw;
-//             line-height: 1.181vw;
-//             font-weight: 600;
-//             margin-bottom: 0.278vw;
-//             display: none;
-//             transition: .5s;
-//           }
-//         }
-//         .linksinside_after{
-//           color: white;
-//           a{
-//            display: inline-block;
-//            transition: .5s;
-//           }
-//         }
-//         .name_s, .nation_s, .author_s, .date_s, .likes, .comments_a, .linksinside {
-//           padding: 2.639vw 2.917vw;
-//           display: inline-block;
-//           text-align: left;
-//         }
-//
-//       }
-//       .list_body_after{
-//         background: #000;
-//         color: white;
-//         transition: .5s;
-//       }
-//     }
-//   }
-// }
-
-// skazka page
-.postbody{
-  width: auto;
-  height: auto;
-  margin-top: $margin;
-  margin-left: $margin * 2;
-  .postlinks{
-    display: flex;
-    flex-direction: row;
-    .edition{
-      width: 11vw;
-      height: 2.381vw;
-      border-radius: 2.679vw;
-      background: $black;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      margin-right: 1.488vw;
-      a{
-        margin-top: 0.417vw;
-        font-size: 1.190vw;
-        font-weight: 600;
-        color: #fff;
-        text-decoration: none;
-      }
-    }
-    .back{
-      width: 6vw;
-      height: 2.381vw;
-      border-radius: 2.679vw;
-      background: $black;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      a{
-        margin-top: 0.417vw;
-        font-size: 1.190vw;
-        font-weight: 600;
-        color: #fff;
-        text-decoration: none;
-      }
-    }
-  }
-  .allcontent{
-    margin-top: $margin;
-    .name{
-      font-size: 3.810vw;
-      font-weight: 700;
-      margin-bottom: 0;
-    }
-    .title{
-      font-size: 1.071vw;
-      font-weight: 600;
-      color: grey;
-      margin-top: 0;
-    }
-    .skazka{
-      width: 60vw;
-      height: auto;
-      margin-top: 2.679vw;
-      font-size: 1.190vw;
-      font-weight: 400;
-    }
-  }
-}
-.comments{
-  margin-left: 8.334vw;
-}
-.favs{
-  margin-left: 8.334vw;
+// styles for post viewing
+.postbody
+{
   display: flex;
   flex-direction: row;
-  margin-top: 2vw;
-  margin-bottom: 5.5vw;
-  .likes_amount{
-    margin-top: .5vw;
-    margin-bottom: 0;
-    margin-left: .5vw;
-    margin-right: 1.5vw;
-    font-family: 'Proxima Nova';
-    font-size: 1.190vw;
-    font-weight: 600;
+  height: auto;
+  .visible{
+    width: 73.75vw;
+    margin-left: 3.472vw;
+    margin-top: 9vw;
+      .postlinks{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .buttons{
+          display: flex;
+          flex-direction: row;
+        }
+        .edition{
+          width: 11vw;
+          height: 2.381vw;
+          border-radius: 2.679vw;
+          background: $black;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          margin-left: 1.488vw;
+          a{
+            margin-top: 0.417vw;
+            font-size: 1.190vw;
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+        .back{
+          width: 6vw;
+          height: 2.381vw;
+          border-radius: 2.679vw;
+          background: $black;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          a{
+            margin-top: 0.417vw;
+            font-size: 1.190vw;
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+      }
+      .allcontent{
+        margin-top: $margin;
+        .name{
+          font-size: 3.810vw;
+          font-weight: 700;
+          margin-bottom: 0;
+        }
+        .title{
+          font-size: 1.071vw;
+          font-weight: 600;
+          color: grey;
+          margin-top: 0;
+        }
+        .skazka{
+          width: 60vw;
+          height: auto;
+          margin-top: 2.679vw;
+          font-size: 1.190vw;
+          font-weight: 400;
+        }
+      }
+      .favs{
+        background: none;
+        width: 45px;
+        height: 45px;
+        margin-left: 1vw;;
+      }
+        form{
+          width: 45px;
+          height: 45px;
+          margin-left: 0;
+          background: none;
+          background: {
+             image: asset_url("bookmark-plus.svg");
+          }
+          background-size: 100%;
+          color: #fff;
+          border: none;
+          cursor: pointer;
+          border-radius: 0;
+          input[type="submit"]{
+            width: 45px;
+            height: 45px;
+            margin: 0;
+            padding: 0;
+          }
+        }
   }
-  input, button{
-    width: 100%;
-    padding: auto .8vw;
+}
+
+// styles for editing/creating post
+.newpost, .editpost{
+  height: 100vw;
+  width: 73.75vw;
+  margin-left: 3.472vw;
+  margin-top: 9vw;
+  .back{
+    width: 6vw;
     height: 2.381vw;
-    font-family: 'Proxima Nova';
-    font-size: 1.190vw;
-    font-weight: 600;
-    color: #fff;
-    border: none;
-    margin-right: 1vw;
-    cursor: pointer;
-
+    border-radius: 2.679vw;
+    background: $black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    a{
+      margin-top: 0.417vw;
+      font-size: 1.190vw;
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+    }
   }
+}
 
-
+// styles for editing/creating post form
+.newpost, .editpost{
+  .postform{
+    margin-top: 2.778vw;
+    form{
+      display: flex;
+      flex-direction: column;
+      background: none;
+      margin: 0;
+      .information{
+        display: flex;
+        flex-direction: row;
+      }
+      .one_1, .two_2{
+        display: flex;
+        flex-direction: column;
+        .field{
+          margin-bottom: 1.736vw;
+          display: flex;
+          flex-direction: column;
+          input[type="text"]{
+            width: 29.167vw;
+            height: 2.778vw;
+            border-radius: 0.347vw;
+            border: none;
+            padding: 0 1.042vw;
+            font-size: 1.111vw;
+          }
+          label{
+            font-size: 1.111vw;
+            margin-bottom: 0.694vw;
+            color: #555;
+          }
+        }
+      }
+      .content{
+        label{
+          font-size: 1.111vw;
+          color: #555;
+        }
+        textarea{
+          margin-top: 0.694vw;
+          height: 21.528vw;
+          width: 61.111vw;
+          border-radius: 0.347vw;
+          border: none;
+        }
+      }
+      .actions{
+        input[type="submit"]{
+          width: auto;
+          height: 2.381vw;
+          border-radius: 2.679vw;
+          background: $black;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          font-size: 1.190vw;
+          font-weight: 600;
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }

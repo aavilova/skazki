@@ -1,15 +1,15 @@
-<%= form_for([@post, @post.comments.build]) do |f| %>
-
-
-
-<div class="full_comment">
-  <div class="field_body">
-   <div class="comment_body">
-       <%= f.text_area :body %>
-   </div>
+<div class="commentform">
+  <%= form_for([@post, @post.comments.build]) do |f| %>
+  <div class="full_comment">
+    <div class="field_body">
+     <div class="comment_body">
+        <%= f.label :body, "Ваш комментарий"%>
+        <%= f.text_area :body %>
+     </div>
+    </div>
+     <div class="actions_create">
+     <%= f.submit value=""%>
+    </div>
   </div>
-   <div class="actions_create">
-   <%= f.submit value="Отправить"%>
-  </div>
+  <% end %>
 </div>
-<% end %>

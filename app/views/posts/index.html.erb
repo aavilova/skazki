@@ -4,7 +4,7 @@
     <div class="admin_panel">
       <div class="all_links">
         <div class="chosen">
-          <%= link_to 'Все посты', posts_path %>
+          <%= link_to 'Посты', posts_path %>
         </div>
         <%= link_to 'Архив'%>
         <%= link_to 'Подборки'%>
@@ -16,7 +16,7 @@
   <div class="content_for_all">
 
     <div class="head_button">
-      <h3>Все посты</h3>
+
       <% if user_signed_in? && current_user.isadmin == true %>
         <div class="link_newpost">
           <%= link_to 'Новый пост', new_post_path %>
@@ -24,10 +24,8 @@
       <% end %>
       <div class="search">
         <%= form_tag posts_path, :method => 'get' do %>
-          <p>
-            <%= text_field_tag :starts_with, params[:starts_with] %>
-            <%= submit_tag "Поиск", :name => nil %>
-          </p>
+            <%= text_field_tag :starts_with, params[:starts_with], placeholder: "Поиск"  %>
+            <%= submit_tag "", :name => nil %>
         <% end %>
       </div>
     </div>
@@ -49,10 +47,12 @@
         <div class="s_author">
           <p>Автор</p>
         </div>
-        <div class="date">
-          <p>Дата публикации</p>
+        <div class="s_status">
+          <p>Статус</p>
         </div>
-        <div class="another_space"></div>
+        <div class="date">
+          <p>Дата&nbsp;публикации</p>
+        </div>
       </div>
 
       <% @posts.each do |post| %>
@@ -61,15 +61,10 @@
         <div class="name_s"><%= link_to post.name, post %></div>
         <div class="nation_s"><%= post.title %></div>
         <div class="author_s"><%= post.author %></div>
-        <div class="date_s"><%= post.created_at.strftime("%-d.%-m.%y %H:%M") %></div>
-
-        <div class="button_to_links"></div>
-        <div class="linksinside">
-          <div class="open"><%= link_to 'Открыть', post %></div>
-
+        <div class="status">
 
         </div>
-
+        <div class="date_s"><%= post.created_at.strftime("%-d.%-m.%y %H:%M") %></div>
       </div>
       <% end %>
 
@@ -78,14 +73,3 @@
   </div>
 </section>
 <p id="notice"><%= notice %></p>
-
-<script type="text/javascript">
- $( document ).ready(function(){
-   $(".button_to_links").click(function(){
-     $(".list_body").toggleClass("list_body_after");
-     $(".linksinside").toggleClass("linksinside_after");
-   });
- })
-
-
-</script>

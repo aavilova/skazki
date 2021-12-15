@@ -1,3 +1,4 @@
+
 $black: #000;
 $left-margin: 4.167vw 0 0 4.167vw;
 $margin: 4.167vw;
@@ -10,34 +11,7 @@ body{
 .postssection{
   display: flex;
   flex-direction: row;
-  .admin_panel{
-    width: 19.236vw;
-    height: 100%;
-    background: #fff;
-    .all_links{
-      display: flex;
-      flex-direction: column;
-      margin-top: 8.681vw;
-      margin-left: 1.736vw;
-      position: fixed;
-      a{
-        font-size: 1.528vw;
-        font-weight: 600;
-        margin-bottom: 2.292vw;
-        padding-left: 1.736vw;
-      }
-      .chosen{
-        width: 15.694vw;
-        height: 2.778vw;
-        background: #E5E5E5;
-        border-radius: 0.417vw;
-        margin-bottom: 1.875vw;
-        a{
-          line-height: 2.778vw;
-        }
-      }
-    }
-  }
+  height: auto;
   .content_for_all{
     width: 80.764vw;
     .head_button, .postsection{
@@ -48,23 +22,54 @@ body{
       display: flex;
       flex-direction: row;
       margin-top: 9vw;
-      h3{
-        margin-top: 0;
-        font-size: 30px;
-        color: $black;
+      justify-content: space-between;
+      .search{
+        form{
+          margin: 0;
+          width: 26.847vw;
+          height: 2.381vw;
+          background: #fff;
+          input[type="text"]{
+            outline-width: 0;
+            outline: none;
+            appearance: none;
+            -webkit-appearance: none;
+            -webkit-writing-mode: none ;
+            color: transparent;
+            border-color: none;
+            background: transparent;
+            border: none;
+            font-size: 1.190vw;
+            font-weight: 400;
+            color: #444;
+            padding-left: .8vw;
+          }
+          input[type="submit"]{
+            width: 1.7vw;
+            height: 1.7vw;
+            background: {
+               image: asset_url("search.svg");
+            }
+            background-size: 100%;
+            margin-top: .3vw;
+            margin-right: 1vw;
+          }
+        }
       }
       .link_newpost{
-        width: 13.194vw;
-        height: 3.472vw;
+        width: 8.594vw;
+        height: 2.381vw;
         background: $black;
         border-radius: 6.944vw;
-        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
         a{
           color: white;
-          font-size: 1.528vw;
+          font-size: 1.190vw;
           font-weight: 600;
-          line-height: 3.472vw;
-
+          height: 1.190vw;
+          margin-top: 0.417vw;
         }
       }
     }
@@ -79,11 +84,12 @@ body{
         border-radius: 0.417vw;
         margin-bottom: 2.222vw;
         div{
+           width: calc(100% / 5);
           p{
             font-size: 1.111vw;
             line-height: 1.319vw;
             font-weight: 600;
-            padding: 17px 42px;
+            padding: 1.181vw 2.917vw;
             margin: 0;
           }
         }
@@ -97,10 +103,16 @@ body{
         border-radius: 0.417vw;
         margin-bottom: 1.042vw;
         transition: .5s;
+        div {
+          width: calc(100% / 5);
+        }
         .name_s, .nation_s, .author_s, .date_s, .likes, .comments_a, .linksinside {
           padding: 2.639vw 2.917vw;
           display: inline-block;
           text-align: left;
+        }
+        .date_s{
+          color: #aaa;
         }
       }
     }

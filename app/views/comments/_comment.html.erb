@@ -5,7 +5,6 @@
 <p class="commentbody">
   <%= comment.body %>
 </p>
-<p>
   <% if user_signed_in? && current_user.id == comment.user_id  %>
  <p class="commentdelete">
    <%= link_to 'Удалить', [comment.post, comment],
