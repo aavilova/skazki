@@ -403,9 +403,13 @@
     <%= image_tag "id2.jpg" %>
     <%= image_tag "id3.jpg" %>
     <%= image_tag "id4.jpg" %>
+    <%= image_tag "id6.jpg" %>
     <%= image_tag "id5.jpg" %>
   </div>
 </section>
+<footer>
+  <%= image_tag "logo.svg" %>
+</footer>
 
 <script type="text/javascript">
   const sections = document.querySelectorAll("section");
@@ -427,24 +431,6 @@ window.onscroll = () => {
   });
 };
   $(document).ready(function () {
-    //
-    // let sectionsBlack = [
-    // "brand_about",
-    // "colors",
-    // "ornaments",
-    // "composition"
-    // ]
-    //
-    // let blackMenu = sectionsBlack;
-    //
-    // $(document).scroll(function() {
-    //     blackMenu = $(this).scrollTop();
-    //     if("section").hasClass(blackMenu)(function(){
-    //       $('.menubar_n a').css('color', '#ECE1CF');
-    //     } else {
-    //        $('.menubar_n a').css('color', '#fff');
-    //    });
-    // });
     $('a').each(function() {
       $(this).on('click', function(e) {
         e.preventDefault();
@@ -455,7 +441,6 @@ window.onscroll = () => {
         }, 1000);
       });
     });
-
       var balls = document.getElementsByClassName('ball');
       document.onmousemove = function(){
         var x = event.clientX * 80 / window.innerWidth + '%';

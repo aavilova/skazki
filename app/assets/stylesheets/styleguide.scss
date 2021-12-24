@@ -35,15 +35,11 @@ header{
   font-family: '20Kopeek-bold';
   top: 11.111vw;
   z-index: 100;
-
   a{
-    color: #ECE1CF;
+    color: #D84E00;
     text-decoration: none;
     margin-bottom: 1.042vw;
-    font-size: 1.389vw;
-  }
-  .open_now{
-    color: #D84E00;
+    font-size: 1.250vw;
   }
 }
 .cover{
@@ -1044,6 +1040,7 @@ header{
   background: #000;
   .allinside_7{
     margin-left: 27vw;
+    margin-bottom: 4.167vw;
     h2{
       margin-left: 0;
       margin-top: 11.111vw;
@@ -1056,5 +1053,15 @@ header{
       width: 65vw;
       margin-top: 3.472vw;
     }
+  }
+}
+footer{
+  background: #000;
+  display: flex;
+  justify-content: center;
+  img{
+    margin-top: 4.167vw;
+    width: 11.806vw;
+    margin-bottom: 4.167vw;
   }
 }
