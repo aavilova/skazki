@@ -28,16 +28,21 @@
     </div>
   </div>
   <div class="two_2">
-
+    <div class="field">
+        <%= form.label :status_id,"Статус" %>
+        <%= form.select :status_id, Status.pluck(:name, :id) %>
+    </div>
   </div>
 </div>
 
+<div class="textarea">
   <div class="content">
     <%= form.label :content, "Текст" %>
     <%= form.text_area :content %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Опубликовать"%>
   </div>
+</div>
 <% end %>

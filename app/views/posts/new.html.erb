@@ -1,13 +1,9 @@
 <section class="postbody">
-
-
   <% if user_signed_in? && current_user.isadmin == true %>
     <div class="admin_panel">
       <div class="all_links">
-        <div class="chosen">
-          <%= link_to 'Посты', posts_path %>
-        </div>
-        <%= link_to 'Архив'%>
+        <%= link_to 'Главная', userview_path %>
+        <%= link_to 'Посты', posts_path, class: "chosen" %>
         <%= link_to 'Подборки'%>
         <%= link_to 'Пользователи', users_path%>
       </div>

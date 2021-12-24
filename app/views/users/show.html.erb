@@ -1,14 +1,58 @@
-<p>ID <%= @user.id %></p>
-<p>Email <%= @user.email %></p>
-<p>Username <%= @user.username %></p>
-<% if user_signed_in? && current_user.isadmin == true %>
-  <p>Admin <%= @user.isadmin %></p>
-<% end %>
-<% if user_signed_in? && @user.id == current_user.id %>
-	<p><%= link_to 'Edit profile', edit_user_registration_path %></p>
-<% end %>
+<section class="postbody">
+  <% if user_signed_in? && current_user.isadmin == true %>
+    <div class="admin_panel">
+      <div class="all_links">
+        <%= link_to 'Главная', userview_path%>
+        <%= link_to 'Посты', posts_path %>
+        <%= link_to 'Подборки'%>
+        <%= link_to 'Пользователи', users_path, class: "chosen"%>
+      </div>
+    </div>
+  <% end %>
 
-In favorites <%= @user.favorites.count %> <%= (@user.favorites.count) == 1 ? 'Post' : 'Posts'%>
-<% @posts.each do |post| %>
-  <br><%= link_to post.title, post %>
-<% end %>
+  <div class="subscribers">
+
+    <div class="buttons">
+      <div class="back">
+        <%= link_to 'Назад', posts_path %>
+      </div>
+      <% if user_signed_in? && @user.id == current_user.id %>
+        <div class="edition_s">
+          <%= link_to 'Редактировать', edit_user_registration_path %>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="postsection_users">
+      <div class="profile">
+        <div class="avatar_m"></div>
+        <div class="information">
+          <h4><%= @user.username %></h4>
+          <p><%= @user.email %></p>
+          <% if user_signed_in? && current_user.isadmin == true %>
+            <h6>Админ</h6>
+          <% end %>
+          <div class="reg_date">
+            <h5>Дата регистрации: </h5><p><%= @user.created_at.strftime("%-d.%-m.%y %H:%M") %></p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="saved">
+        <% @posts.each do |post| %>
+        <h2>Сохранённые посты</h2>
+        <div class="post_s">
+          <div class="skz_t">
+              <h1><%= link_to post.name, post %></h1>
+              <p><%= post.title %></p>
+          </div>
+        </div>
+        <% end %>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

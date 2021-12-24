@@ -1,12 +1,12 @@
+<% if user_signed_in? && current_user.isadmin == true %>
 <section class="postssection">
 
   <% if user_signed_in? && current_user.isadmin == true %>
     <div class="admin_panel">
       <div class="all_links">
-        <div class="chosen">
-          <%= link_to 'Посты', posts_path %>
-        </div>
-        <%= link_to 'Архив'%>
+
+        <%= link_to 'Главная', userview_path %>
+        <%= link_to 'Посты', posts_path, class: "chosen"  %>
         <%= link_to 'Подборки'%>
         <%= link_to 'Пользователи', users_path%>
       </div>
@@ -18,9 +18,17 @@
     <div class="head_button">
 
       <% if user_signed_in? && current_user.isadmin == true %>
+      <div class="left_links">
         <div class="link_newpost">
-          <%= link_to 'Новый пост', new_post_path %>
+            <%= link_to 'Новый пост', new_post_path %>
         </div>
+        <div class="sort_by_status">
+          <% Status.all.each do |status| %>
+           <%= link_to status.name, posts_path(status: status.name) %>
+          <% end %>
+        </div>
+
+      </div>
       <% end %>
       <div class="search">
         <%= form_tag posts_path, :method => 'get' do %>
@@ -32,7 +40,15 @@
 
 
     <div class="filter_panel">
-
+        <div class="sort_by">
+          Сортировать по:
+        </div>
+        <div class="cathegories">
+          <p>Последние</p>
+          <p>Народы</p>
+          <p>Регионы</p>
+          <p>Тэги</p>
+        </div>
     </div>
 
     <section class="postsection">
@@ -61,9 +77,7 @@
         <div class="name_s"><%= link_to post.name, post %></div>
         <div class="nation_s"><%= post.title %></div>
         <div class="author_s"><%= post.author %></div>
-        <div class="status">
-
-        </div>
+        <div class="status"><%= post.status.name %></div>
         <div class="date_s"><%= post.created_at.strftime("%-d.%-m.%y %H:%M") %></div>
       </div>
       <% end %>
@@ -72,4 +86,4 @@
 
   </div>
 </section>
-<p id="notice"><%= notice %></p>
+<% end %>

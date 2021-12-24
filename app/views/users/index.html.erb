@@ -1,19 +1,67 @@
-<table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Email</th>
-      <th>Username</th>
-    </tr>
-  </thead>
+<section class="postbody">
+  <% if user_signed_in? && current_user.isadmin == true %>
+    <div class="admin_panel">
+      <div class="all_links">
+        <%= link_to 'Главная', userview_path%>
+        <%= link_to 'Посты', posts_path %>
+        <%= link_to 'Подборки'%>
+        <%= link_to 'Пользователи', users_path, class: "chosen"%>
+      </div>
+    </div>
+  <% end %>
 
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.id %></td>
-        <td><%= link_to user.email, user %></td>
-        <td><%= user.username %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <div class="subscribers">
+
+    <div class="head_button">
+      <h2>Все пользователи</h2>
+      <div class="search">
+        <%= form_tag posts_path, :method => 'get' do %>
+            <%= text_field_tag :starts_with, params[:starts_with], placeholder: "Поиск"  %>
+            <%= submit_tag "", :name => nil %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="filter_panel_users">
+        <div class="sort_by">
+          Сортировать по:
+        </div>
+        <div class="cathegories">
+          <p>Имени</p>
+          <p>Дате регистрации</p>
+        </div>
+    </div>
+
+    <div class="postsection_users">
+      <div class="list_head">
+        <div class="name">
+          <p>Аватар</p>
+        </div>
+        <div class="nation">
+          <p>Имя&nbsp;пользователя</p>
+        </div>
+        <div class="s_author">
+          <p>E-mail</p>
+        </div>
+        <div class="s_status">
+          <p>Статус</p>
+        </div>
+        <div class="date">
+          <p>Дата&nbsp;регистрации</p>
+        </div>
+      </div>
+
+      <div class="list_body">
+        <% @users.each do |user| %>
+        <div class="avatar"><div class="icon"></div></div>
+        <div class="username"><%= link_to user.username, user %></div>
+        <div class="email"><%= user.email %></div>
+        <div class="status"><% if user_signed_in? && current_user.isadmin == true %> Админ <% else %> Пользователь <% end %></div>
+        <div class="date_s"><%= user.created_at.strftime("%-d.%-m.%y %H:%M") %></div>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+
+</section>

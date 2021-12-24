@@ -18,9 +18,11 @@ body {
   margin: 0;
 }
 .three, .one {
+  height: 100vh;
   background-color: $red;
 }
 .two{
+  height: 100vh;
   background-color: $black;
   display: flex;
   flex-direction: row;
@@ -32,7 +34,6 @@ body {
 section {
   overflow: hidden;
   width: 100vw;
-  height: 100vh;
   position: relative;
   a {
     text-decoration: none;

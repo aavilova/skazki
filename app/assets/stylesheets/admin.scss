@@ -9,6 +9,7 @@ body{
 }
 
 .postssection{
+  min-height: 100vh;
   display: flex;
   flex-direction: row;
   height: auto;
@@ -16,64 +17,118 @@ body{
     width: 80.764vw;
     .head_button, .postsection{
       width: 73.750vw;
-      margin-left: 3.472vw;
+      margin-left: 22.917vw;
     }
     .head_button{
       display: flex;
       flex-direction: row;
       margin-top: 9vw;
       justify-content: space-between;
-      .search{
-        form{
-          margin: 0;
-          width: 26.847vw;
+      // .search{
+      //   form{
+      //     margin: 0;
+      //     width: 26.847vw;
+      //     height: 2.381vw;
+      //     background: #fff;
+      //     input[type="text"]{
+      //       outline-width: 0;
+      //       outline: none;
+      //       appearance: none;
+      //       -webkit-appearance: none;
+      //       -webkit-writing-mode: none ;
+      //       color: transparent;
+      //       border-color: none;
+      //       background: transparent;
+      //       border: none;
+      //       font-size: 1.190vw;
+      //       font-weight: 400;
+      //       color: #444;
+      //       padding-left: .8vw;
+      //     }
+      //     input[type="submit"]{
+      //       width: 1.7vw;
+      //       height: 1.7vw;
+      //       background: {
+      //          image: asset_url("search.svg");
+      //       }
+      //       background-size: 100%;
+      //       margin-top: .3vw;
+      //       margin-right: 1vw;
+      //     }
+      //   }
+      // }
+      .left_links{
+        display: flex;
+        flex-direction: row;
+        .link_newpost{
+          width: 8.594vw;
           height: 2.381vw;
-          background: #fff;
-          input[type="text"]{
-            outline-width: 0;
-            outline: none;
-            appearance: none;
-            -webkit-appearance: none;
-            -webkit-writing-mode: none ;
-            color: transparent;
-            border-color: none;
-            background: transparent;
-            border: none;
+          background: $black;
+          border-radius: 6.944vw;
+          display: flex;
+          justify-content: center;
+          a{
+            color: white;
             font-size: 1.190vw;
-            font-weight: 400;
-            color: #444;
-            padding-left: .8vw;
+            font-weight: 600;
+            height: 1.190vw;
+            margin-top: 0.417vw;
           }
-          input[type="submit"]{
-            width: 1.7vw;
-            height: 1.7vw;
-            background: {
-               image: asset_url("search.svg");
-            }
-            background-size: 100%;
-            margin-top: .3vw;
-            margin-right: 1vw;
+        }
+        .sort_by_status{
+          display: flex;
+          flex-direction: row;
+          line-height: 1.250vw;
+          font-weight: 600;
+          color: #666;
+          a{
+            margin-left: 1.736vw;
+            margin-top: .5vw;
+            font-size: 1.250vw;
+            line-height: 1.250vw;
+            font-weight: 600;
+            color: #666;
+            cursor: pointer;
+            position: relative;
+          }
+          :first-child:after{
+            content: "|";
+            position: absolute;
+            top: 0;
+            right: -1vw;
           }
         }
       }
-      .link_newpost{
-        width: 8.594vw;
-        height: 2.381vw;
-        background: $black;
-        border-radius: 6.944vw;
+    }
+    .filter_panel{
+      display: flex;
+      flex-direction: row;
+      margin-left: 22.917vw;
+      margin-top: 3.472vw;
+      .sort_by{
+        font-size: 1.250vw;
+        font-weight: 600;
+      }
+      .cathegories{
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        margin-left: 1.736vw;
         a{
-          color: white;
-          font-size: 1.190vw;
-          font-weight: 600;
-          height: 1.190vw;
-          margin-top: 0.417vw;
+          font-size: 1.250vw;
+          color: #666;
+          margin: 0 3.472vw 0 0;
+          cursor: pointer;
+        }
+        p{
+          font-size: 1.250vw;
+          color: #666;
+          margin: 0 3.472vw 0 0;
+          cursor: pointer;
         }
       }
     }
     .postsection{
+      height: auto;
       margin-top: 2.292vw;
       .list_head{
         display: flex;
@@ -106,7 +161,7 @@ body{
         div {
           width: calc(100% / 5);
         }
-        .name_s, .nation_s, .author_s, .date_s, .likes, .comments_a, .linksinside {
+        .name_s, .nation_s, .author_s, .date_s, .status, .comments_a, .linksinside {
           padding: 2.639vw 2.917vw;
           display: inline-block;
           text-align: left;

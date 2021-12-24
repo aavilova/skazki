@@ -1,0 +1,122 @@
+// Place all the styles related to the Userview controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.postbody{
+  .user_posts{
+    width: 73.611vw;
+    margin-top: 9vw;
+    margin-left: 22.917vw;
+    margin-bottom: 7.639vw;
+    .head_r{
+      display: flex;
+      justify-content: space-between;
+      h2{
+        margin-top: 4.514vw;
+        font-size: 2.361vw;
+        font-weight: 700;
+        margin-left: 0;
+        margin-bottom: 1.736vw;
+      }
+      p{
+        margin-top: 4.514vw;
+        color: #8E8E8E;
+        height: auto;
+        cursor: pointer;
+      }
+    }
+    .head_user{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      h2{
+        font-size: 2.361vw;
+        font-weight: 700;
+        margin: 0;
+      }
+      .search{
+        form{
+          margin: 0;
+          width: 26.847vw;
+          height: 2.381vw;
+          background: #fff;
+          input[type="text"]{
+            outline-width: 0;
+            outline: none;
+            appearance: none;
+            -webkit-appearance: none;
+            -webkit-writing-mode: none ;
+            color: transparent;
+            border-color: none;
+            background: transparent;
+            border: none;
+            font-size: 1.190vw;
+            font-weight: 400;
+            color: #444;
+            padding-left: .8vw;
+          }
+          input[type="submit"]{
+            width: 1.7vw;
+            height: 1.7vw;
+            background: {
+               image: asset_url("search.svg");
+            }
+            background-size: 100%;
+            margin-top: .3vw;
+            margin-right: 1vw;
+          }
+        }
+      }
+    }
+    .post_of_the_day{
+      margin-top: 1.736vw;
+      width: 73.611vw;
+      height: 23.264vw;
+      border-radius: 1.250vw;
+      background: #fff;
+      padding-left: 3.125vw;
+      position: relative;
+      .titles{
+        position: absolute;
+        bottom: 3.125vw;
+        .name_u{
+          font-size: 2.500vw;
+          line-height: 100%;
+          font-weight: 700;
+        }
+        .nation_u{
+          font-size: 1.250vw;
+          color: #808080;
+          margin-top: 0.694vw;
+        }
+      }
+    }
+    .region_top{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .skaz{
+        position: relative;
+        width: 23.264vw;
+        height: 23.264vw;
+        border-radius: 1.250vw;
+        background: #fff;
+        padding-left: 3.125vw;
+        .titles{
+          position: absolute;
+          bottom: 3.125vw;
+          .name_u{
+            font-size: 2.500vw;
+            line-height: 100%;
+            font-weight: 700;
+          }
+          .nation_u{
+            font-size: 1.250vw;
+            color: #808080;
+            margin-top: 0.694vw;
+          }
+        }
+      }
+    }
+  }
+
+}

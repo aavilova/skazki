@@ -15,6 +15,7 @@
   </head>
 
   <body>
+
     <div class="top_menu">
       <% if user_signed_in? %>
         <%= link_to 'Аккаунт', current_user %> | <%= link_to 'Выход', destroy_user_session_path, method: :delete %>
@@ -23,11 +24,7 @@
       <% end %>
     </div>
 
-    <% if notice %>
-      <p class="notice"><%= notice %></p>
-    <% elsif alert %>
-      <p class="alert"><%= alert %></p>
-    <% end %>
+  
     <%= yield %>
   </body>
 </html>

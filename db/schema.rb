@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_03_092546) do
+ActiveRecord::Schema.define(version: 2021_12_15_202758) do
 
   create_table "comments", force: :cascade do |t|
     t.string "commenter"
@@ -32,15 +32,6 @@ ActiveRecord::Schema.define(version: 2021_12_03_092546) do
     t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
-  create_table "likes", force: :cascade do |t|
-    t.integer "post_id", null: false
-    t.integer "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["post_id"], name: "index_likes_on_post_id"
-    t.index ["user_id"], name: "index_likes_on_user_id"
-  end
-
   create_table "posts", force: :cascade do |t|
     t.string "name"
     t.string "title"
@@ -49,11 +40,15 @@ ActiveRecord::Schema.define(version: 2021_12_03_092546) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "author"
     t.integer "user_id", null: false
+    t.integer "status_id", null: false
+    t.index ["status_id"], name: "index_posts_on_status_id"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
-  create_table "roles", force: :cascade do |t|
+  create_table "statuses", force: :cascade do |t|
     t.string "name"
+    t.text "description"
+    t.boolean "display_in_navbar"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -82,7 +77,6 @@ ActiveRecord::Schema.define(version: 2021_12_03_092546) do
   add_foreign_key "comments", "users"
   add_foreign_key "favorites", "posts"
   add_foreign_key "favorites", "users"
-  add_foreign_key "likes", "posts"
-  add_foreign_key "likes", "users"
+  add_foreign_key "posts", "statuses"
   add_foreign_key "posts", "users"
 end

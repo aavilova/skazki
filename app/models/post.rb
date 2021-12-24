@@ -1,6 +1,6 @@
 class Post < ApplicationRecord
 
-  belongs_to :posts
+  belongs_to :status
   belongs_to :user
   validates :name, :presence => true
   validates :author, :presence => true
@@ -9,7 +9,7 @@ class Post < ApplicationRecord
 
 
   has_many :comments, :dependent => :destroy
-  has_many :likes, dependent: :destroy
+  # has_many :likes, dependent: :destroy
   has_many :favorites, dependent: :destroy
 
   scope :filter_by_starts_with, -> (name) { where("name like ?", "%#{name}%")}

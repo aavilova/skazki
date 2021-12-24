@@ -1,5 +1,3 @@
-
-
 $black: #000;
 $margin: 4.167vw;
 
@@ -13,10 +11,9 @@ body{
 {
   display: flex;
   flex-direction: row;
-  height: auto;
   .visible{
     width: 73.75vw;
-    margin-left: 3.472vw;
+    margin-left: 22.917vw;
     margin-top: 9vw;
       .postlinks{
         display: flex;
@@ -27,20 +24,24 @@ body{
           flex-direction: row;
         }
         .edition{
-          width: 11vw;
-          height: 2.381vw;
-          border-radius: 2.679vw;
-          background: $black;
           display: flex;
           flex-direction: row;
           justify-content: center;
           margin-left: 1.488vw;
           a{
-            margin-top: 0.417vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: auto;
+            padding: 0.4vw  1vw;
+            height: 2.381vw;
+            border-radius: 2.679vw;
+            background: #000;
             font-size: 1.190vw;
             font-weight: 600;
             color: #fff;
             text-decoration: none;
+            margin-right: 1.488vw;
           }
         }
         .back{
@@ -85,8 +86,7 @@ body{
         background: none;
         width: 45px;
         height: 45px;
-        margin-left: 1vw;;
-      }
+        margin-left: 1vw;
         form{
           width: 45px;
           height: 45px;
@@ -107,6 +107,13 @@ body{
             padding: 0;
           }
         }
+        .dislike{
+          background: {
+             image: asset_url("bookmark-fill.svg");
+          }
+          background-size: 100%;
+        }
+      }
   }
 }
 
@@ -136,6 +143,7 @@ body{
 
 // styles for editing/creating post form
 .newpost, .editpost{
+  margin-left: 22.917vw;
   .postform{
     margin-top: 2.778vw;
     form{
@@ -169,34 +177,63 @@ body{
           }
         }
       }
-      .content{
-        label{
-          font-size: 1.111vw;
-          color: #555;
-        }
-        textarea{
-          margin-top: 0.694vw;
-          height: 21.528vw;
-          width: 61.111vw;
-          border-radius: 0.347vw;
-          border: none;
+      .two_2{
+        margin-left: 3.125vw;
+        .field{
+          select{
+            width: 29.167vw;
+            height: 2.778vw;
+            border-radius: 0.347vw;
+            border: none;
+            padding-right: 2vw;
+            padding-left: 1.042vw;
+            font-size: 1.111vw;
+          }
         }
       }
-      .actions{
-        input[type="submit"]{
-          width: auto;
-          height: 2.381vw;
-          border-radius: 2.679vw;
-          background: $black;
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          font-size: 1.190vw;
-          font-weight: 600;
-          color: #fff;
-          text-decoration: none;
+      .textarea{
+        display: flex;
+        .content{
+          label{
+            font-size: 1.111vw;
+            color: #555;
+          }
+          textarea{
+            margin-top: 0.694vw;
+            height: 20vw;
+            width: 61.111vw;
+            border-radius: 0.347vw;
+            border: none;
+            font-size: 1.111vw;
+            padding: 1vw;
+            font-family: 'Proxima Nova';
+          }
+        }
+        .actions{
+          position: relative;
+          input[type="submit"]{
+            position: absolute;
+            bottom: 0;
+            width: auto;
+            padding: 0 1vw;
+            height: 2.381vw;
+            border-radius: 2.679vw;
+            background: $black;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            font-size: 1.190vw;
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+            margin-left: 2.92vw;
+            margin-right: 0;
+          }
         }
       }
     }
   }
+}
+.Black{
+  background: #000;
 }

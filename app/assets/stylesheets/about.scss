@@ -10,10 +10,10 @@ body {
 section{
   overflow: hidden;
   width: 100vw;
-  height: 100vh;
   position: relative;
 }
 .first{
+  height: 100vh;
   background-color: $black;
   background: {
      image: asset_url("section1.svg");
@@ -39,6 +39,7 @@ section{
   }
 }
 .second{
+  height: 100vh;
   background-color: $white;
   background: {
      image: asset_url("section2.svg");
@@ -64,6 +65,7 @@ section{
   }
 }
 .third{
+  height: 100vh;
   background-color: $black;
   .pics3{
     margin: $margin-about;
@@ -86,6 +88,7 @@ section{
   }
 }
 .forth{
+  height: 100vh;
   background-color: $white;
   background: {
      image: asset_url("section4.svg");
@@ -111,6 +114,7 @@ section{
   }
 }
 .fifth{
+  height: 100vh;
   background-color: $red;
   .pics5{
     margin: $margin-about;
@@ -134,6 +138,7 @@ section{
   }
 }
 .sixth{
+  height: 100vh;
   background-color: $black;
   background: {
      image: asset_url("section6.svg");
@@ -215,6 +220,7 @@ section{
   }
 }
 .seventh{
+  height: 100vh;
   background-color: $white;
   .blackhead{
     margin: $margin-about;
@@ -246,6 +252,7 @@ section{
   }
 }
 .eighth{
+  height: 100vh;
   background-color: $black;
   background: {
      image: asset_url("section8.svg");
@@ -281,6 +288,7 @@ section{
   }
 }
 .ninth{
+  height: 100vh;
   background-color: $red;
   height: 50vh;
   footer{

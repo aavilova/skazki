@@ -5,7 +5,12 @@ class PostsController < ApplicationController
 
   # GET /posts or /posts.json
   def index
-    @posts = Post.all
+    if params.has_key?(:status)
+      @status = Status.find_by_name(params[:status])
+      @posts = Post.where(status: @status)
+    else
+      @posts = Post.all
+    end
   end
 
   # GET /posts/1 or /posts/1.json
@@ -70,7 +75,7 @@ class PostsController < ApplicationController
     #   params.require(:post).permit(:name, :title, :content, :author, :image)
     # end
     def post_params
-	     params.require(:post).permit(:name, :title, :author, :content)
+	     params.require(:post).permit(:name, :title, :author, :content, :status_id, :user_id)
     end
     def filtering_params(params)
       params.slice(:user, :category, :starts_with)

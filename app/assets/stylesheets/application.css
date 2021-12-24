@@ -14,6 +14,10 @@
  *= require_self
  *= stub admin
  */
+ body{
+   min-height: 100vh;
+ }
+
 @font-face {
    font-family: 'ProximaNova';
    src: url('ProximaNova-Bold.woff') format("webopenfontformat");
@@ -27,8 +31,24 @@
 @font-face {
   font-family: 'ProximaNova';
   src: url('ProximaNova-Light.woff') format("webopenfontformat");
-
 }
+@font-face {
+  font-family: '20Kopeek-bold';
+  src: url('20Kopeek-DemiBold.otf');
+}
+@font-face {
+  font-family: '20Kopeek-book';
+  src: url('20Kopeek-Book.otf');
+}
+@font-face {
+  font-family: 'Craftwork-Grotesk';
+  src: url('CraftworkGrotesk-Medium.ttf');
+}
+@font-face {
+  font-family: '21Cent';
+  src: url('21Cent.ttf');
+}
+
 .top_menu {
   display: flex;
   justify-content: flex-end;
@@ -51,32 +71,74 @@
   font-weight: 600;
 }
 
+/* apppers ony if user logged in as a user */
+.user_panel{
+  position: absolute;
+  width: 19.236vw;
+  height: 100%;
+  background: #fff;
+}
+
 /* apppers ony if user logged in as an admin */
 .admin_panel{
+  display: block;
+  position: absolute;
   width: 19.236vw;
-  height: auto;
+  height: 100%;
+  top: 0;
   background: #fff;
 }
 .all_links{
   position: fixed;
   display: flex;
+  height: 14vw;
   flex-direction: column;
   margin-top: 8.681vw;
   margin-left: 1.736vw;
+  justify-content:space-between;
 }
 .all_links a{
+  padding-top: .5vw;
+  height: 2.778vw;
+  color: #000;
   font-size: 1.528vw;
   font-weight: 600;
-  margin-bottom: 2.292vw;
   padding-left: 1.736vw;
+  text-decoration: none;
 }
 .chosen{
+  margin: 0;
   width: 15.694vw;
   height: 2.778vw;
   background: #E5E5E5;
   border-radius: 0.417vw;
-  margin-bottom: 1.875vw;
 }
-.chosen a{
-  line-height: 2.778vw;
+.search form{
+    margin: 0;
+    width: 26.847vw;
+    height: 2.381vw;
+    background: #fff;
+}
+.search form input[type="text"]{
+  outline-width: 0;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -webkit-writing-mode: none ;
+  color: transparent;
+  border-color: none;
+  background: transparent;
+  border: none;
+  font-size: 1.190vw;
+  font-weight: 400;
+  color: #444;
+  padding-left: .8vw;
+}
+.search form input[type="submit"]{
+  width: 1.7vw;
+  height: 1.7vw;
+  background-image: url("search.svg");;
+  background-size: 100%;
+  margin-top: .3vw;
+  margin-right: 1vw;
 }
