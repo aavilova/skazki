@@ -1,0 +1,73 @@
+// Place all the styles related to the Dictionary controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.skazka{
+  .serch_d{
+    display: flex;
+    align-items: center;
+    margin-bottom: 13.889vw;
+    .img1, .img2{
+      img{
+        width: 10.069vw;
+      }
+    }
+  }
+  .popularwords{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    .frame{
+      display: flex;
+      .flvrr, .flvrl{
+        img{
+          width: 32.153vw;
+        }
+      }
+      h3{
+        font-family: Proxima Nova;
+        font-weight: 600;
+        font-size: 2.5vw;
+        line-height: 90%;
+        color: #ECE1CF;
+        margin: 0 1.38vw;
+      }
+    }
+    .worldlist{
+      margin: 0;
+      display: flex;
+      width: 77.778vw;
+      justify-content: space-between;
+      .list1, .list2, .list3, .list4{
+        .wordcontainer{
+          margin: 6.944vw 0;
+          h3{
+            font-family: 'Proxima Nova';
+            font-weight: 600;
+            font-size: 2.083vw;
+            line-height: 89.84%;
+            color: #ECE1CF;
+            text-align: left;
+            margin: 0;
+          }
+          p{
+            font-family: 'Proxima Nova';
+            font-weight: 400;
+            font-size: 1.111vw;
+            line-height: 118.5%;
+            color: #ECE1CF;
+            opacity: 0.5;
+            margin: 0.278vw 0 1.389vw 0;
+          }
+          h5{
+            font-family: 'Proxima Nova';
+            font-weight: 400;
+            font-size: 1.389vw;
+            line-height: 89.84%;
+            color: #ECE1CF;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

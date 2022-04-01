@@ -1,73 +1,153 @@
-<section class="postbody">
-  <% if user_signed_in? && current_user.isadmin == true %>
-    <div class="admin_panel">
-      <div class="all_links">
-        <%= link_to 'Главная', userview_path, class: "chosen" %>
-        <%= link_to 'Посты', posts_path %>
-        <%= link_to 'Подборки'%>
-        <%= link_to 'Пользователи', users_path%>
+<section class="fullpage">
+  <div class="bckgr">
+    <div class="left">
+      <%= image_tag "bacgrleft.svg" %>
+    </div>
+    <div class="bckgrflvrs">
+      <div class="leftflvr">
+        <%= image_tag "flvrbgl.svg" %>
       </div>
-    </div>
-    <% else %>
-    <div class="user_panel">
-      <div class="all_links">
-        <%= link_to 'Главная', userview_path, class: "chosen" %>
-        <%= link_to 'Избранное'%>
-        <%= link_to 'Подборки'%>
-        <%= link_to 'История'%>
-      </div>
-    </div>
-  <% end %>
-
-  <div class="user_posts">
-
-    <div class="head_user">
-      <h2>Сказка дня</h2>
-      <div class="search">
-        <%= form_tag posts_path, :method => 'get' do %>
-            <%= text_field_tag :starts_with, params[:starts_with], placeholder: "Поиск"  %>
-            <%= submit_tag "", :name => nil %>
-        <% end %>
-      </div>
-    </div>
-
-    <% @posts.take(1).each do |post| %>
-    <div class="post_of_the_day">
-      <div class="titles">
-        <div class="name_u"><%= link_to post.name, post %></div>
-        <div class="nation_u"><%= post.title %></div>
-      </div>
-    </div>
-    <% end %>
-
-    <div class="head_r">
-      <h2>Топ в вашем регионе</h2>
-      <p>Больше ></p>
-    </div>
-    <div class="region_top">
-    <% @posts.each do |post| %>
-      <div class="skaz">
-        <div class="titles">
-          <div class="name_u"><%= link_to post.name, post %></div>
-          <div class="nation_u"><%= post.title %></div>
+      <div class="bacgrleafs">
+        <div class="leftleaf">
+          <%= image_tag "leafsleft.svg" %>
+        </div>
+        <div class="rightleaf">
+          <%= image_tag "leafsright.svg" %>
         </div>
       </div>
-    <% end %>
-    </div>
-    <div class="head_r">
-      <h2>Топ в других регионах</h2>
-      <p>Больше ></p>
-    </div>
-    <div class="region_top">
-    <% @posts.each do |post| %>
-      <div class="skaz">
-        <div class="titles">
-          <div class="name_u"><%= link_to post.name, post %></div>
-          <div class="nation_u"><%= post.title %></div>
-        </div>
+      <div class="rightflvr">
+        <%= image_tag "flvrbgr.svg" %>
       </div>
-    <% end %>
+    </div>
+    <div class="right">
+      <%= image_tag "bacgrright.svg" %>
     </div>
   </div>
+  <section class="mainbody">
+    <section class="taleoftheday">
+      <div class="headname">
+        <div class="frame">
+          <div class="flvrs">
+            <%= image_tag "flvr1.svg" %>
+          </div>
+          <h3>Сказка дня</h3>
+          <div class="flvrs">
+            <%= image_tag "flvr2.svg" %>
+          </div>
+        </div>
+        <div class="title">
+          <h1>Ласточка и комар</h1>
+          <p>Удмуртская сказка</p>
+          <%= image_tag "skazka.gif" %>
+          <%= link_to 'Читать', post_path(5) %>
+        </div>
+      </div>
+    </section>
+
+    <section class="popular_tales">
+      <div class="frame">
+        <div class="flvrs">
+          <%= image_tag "flvrssection1.svg" %>
+        </div>
+        <h3>Популярные сказки</h3>
+        <div class="flvrs">
+          <%= image_tag "flvrssection2.svg" %>
+        </div>
+      </div>
+      <div class="populartales">
+        <div class="slider">
+          <%= image_tag "slideright.svg" %>
+        </div>
+        <%= react_component 'Popular_tales', posts: @posts %>
+        <div class="slidel">
+          <%= image_tag "slideleft.svg" %>
+        </div>
+      </div>
+    </section>
+
+    <section class="map">
+      <div class="frame">
+        <div class="flvrs">
+          <%= image_tag "flvrsmapl.svg" %>
+        </div>
+        <h3>Карта</h3>
+        <div class="flvrs">
+          <%= image_tag "flvrsmapr.svg" %>
+        </div>
+      </div>
+      <p>Выберите любой регион на&nbsp;карте и&nbsp;найдите сказки, населяющих его народов</p>
+      <div class="mapimg"></div>
+    </section>
+
+    <section class="searchblock">
+      <%= react_component 'O_Searchblock' %>
+    </section>
+
+    <section class="interesting_tales">
+      <div class="frame">
+        <div class="flvrs">
+          <%= image_tag "flvrssection_r1.svg" %>
+        </div>
+        <h3>Может быть интересно</h3>
+        <div class="flvrs">
+          <%= image_tag "flvrssection_l1.svg" %>
+        </div>
+      </div>
+
+      <div class="maybeinteresting">
+        <div class="slider">
+          <%= image_tag "slideright.svg" %>
+        </div>
+        <%= react_component 'O_Popular_tales', posts: @posts %>
+        <div class="slidel">
+          <%= image_tag "slideleft.svg" %>
+        </div>
+      </div>
+    </section>
+
+    <section class="region_tales">
+      <div class="frame">
+        <div class="flvrs">
+          <%= image_tag "flvrssection_r1.svg" %>
+        </div>
+        <h3>Подборки по регионам</h3>
+        <div class="flvrs">
+          <%= image_tag "flvrssection_l1.svg" %>
+        </div>
+      </div>
+
+      <div class="sliderset">
+        <%= image_tag "slideright.svg" %>
+      </div>
+      <div class="set"><a href="404">
+        <div class="descr">
+          <h1>Татарские <br>сказки</h1>
+          <p>Лучшие татарские сказки для&nbsp;детей и&nbsp;взрослых, которые могут как&nbsp;уму-разуму научить, так&nbsp;и&nbsp;просто позабавить</p>
+          <div class="link">Читать</div>
+        </div>
+        <div class="spin">
+          <div class="circle1">
+            <%= image_tag "circle1.svg" %>
+          </div>
+          <div class="circle2">
+            <%= image_tag "circle2.svg" %>
+          </div>
+          <div class="eyeball">
+            <div class="eye">
+              <div class="puppil"></div>
+            </div>
+          </div>
+        </div>
+      </a></div>
+      <div class="slidelset">
+        <%= image_tag "slideleft.svg" %>
+      </div>
+    </section>
+
+
+    <section class="subscribtion">
+      <%= react_component 'O_Subscribe', subscriber: @subscriber %>
+    </section>
+  </section>
 
 </section>

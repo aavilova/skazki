@@ -1,3 +1,146 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.user_information{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .staticsection{
+    width: 56.35vw;
+    margin-top: 9.028vw;
+    .back{
+      display: flex;
+      margin-bottom: 4.167vw;
+      img{
+        margin-right: 0.556vw;
+        width: 1.597vw;
+      }
+      a{
+        font-family: 'Proxima Nova';
+        font-weight: 400;
+        font-size: 1.111vw;
+        line-height: 130%;
+        display: flex;
+        align-items: center;
+        color: #ECE1CF;
+      }
+    }
+    .component_info{
+      width: 41.667vw;
+      margin: 4.6vw auto 0 13.97vw;
+      margin-bottom: 13.889vw;
+      .userinfo{
+        display: flex;
+        vertical-align: top;
+        .avatar{
+          margin: auto 2.083vw auto 0;
+          width: 11.111vw;
+          height: 11.111vw;
+          display: inline-block;
+          background: {
+            image: asset_url("avatar.svg");
+          }
+          background-size: 100%
+        }
+        .userabout{
+          display: inline-block;
+          padding-top: .556vw;
+          h2{
+            font-family: 'Proxima Nova';
+            font-weight: 600;
+            font-size: 2.083vw;
+            line-height: 90%;
+            display: flex;
+            color: #ECE1CF;
+            margin: 0;
+          }
+          h4{
+            font-family: 'Proxima Nova';
+            font-weight: 400;
+            font-size: 1.250vw;
+            line-height: 90%;
+            display: flex;
+            color: rgba(236, 225, 207, 0.5);
+            margin: 0.694vw 0 3.472vw 0;
+          }
+          a{
+            width: 14.444vw;
+            height: 3.194vw;
+            background: #101010;
+            border: 1px solid #ECE1CF;
+            border-radius: 6.042vw;
+            font-family: 'Proxima Nova';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.389vw;
+            line-height: 90%;
+            display: flex;
+            align-items: center;
+            color: #ECE1CF;
+            padding: 0 2.431vw;
+          }
+        }
+      }
+    }
+  }
+  .saved{
+    .frame{
+      img{
+        width: 34.167vw;
+      }
+      h2{
+        font-family: 'Proxima Nova';
+        font-weight: 600;
+        font-size: 2.5vw;
+        color: #ECE1CF;
+        margin: 0 1.389vw 6.944vw 1.389vw;
+      }
+    }
+    .sets{
+      display: flex;
+      .savedall{
+        cursor: pointer;
+        position: relative;
+        width: 20.833vw;
+        height: 27.778vw;
+        background: {
+          image: asset_url("savedcover.svg");
+        }
+        background-position: center;
+        background-size: 110%;
+        border: 1px solid #ECE1CF;
+        margin-bottom: 6.944vw;
+        margin-right: 2.083vw;
+        a{
+          position: absolute;
+          top: 0;
+          width: 20.833vw;
+          height: 27.778vw;
+          padding: 12.778vw 3.681vw;
+          font-family: 'Proxima Nova';
+          font-weight: 600;
+          font-size: 2.5vw;
+          line-height: 89.84%;
+          text-align: center;
+          color: #ECE1CF;
+        }
+      }
+      .add{
+        width: 20.833vw;
+        height: 27.778vw;
+        border: 1px solid #ECE1CF;
+        padding: 11.736vw 8.264vw;
+        .addbutton{
+          cursor: pointer;
+          width: 4.306vw;
+          height: 4.306vw;
+          background-position: center;
+          background-size: 100%;
+          background: {
+            image: asset_url("newset.svg");
+          }
+        }
+      }
+    }
+  }
+}

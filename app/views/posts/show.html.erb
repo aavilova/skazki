@@ -1,71 +1,45 @@
- <!-- <p id="notice"><%= notice %></p> %> -->
-<section class="postbody">
-
-  <% if user_signed_in? && current_user.isadmin == true %>
-    <div class="admin_panel">
-      <div class="all_links">
-        <%= link_to 'Главная', userview_path %>
-        <%= link_to 'Посты', posts_path, class: "chosen" %>
-        <%= link_to 'Подборки'%>
-        <%= link_to 'Пользователи', users_path%>
-      </div>
+<section class="taleitself">
+  <div class="bckgr">
+    <div class="left">
+      <%= image_tag "bacgrleft.svg" %>
     </div>
-  <% end %>
-
-  <div class="visible">
-    <div class="postlinks">
-      <div class="buttons">
-        <div class="back">
-          <%= link_to 'Назад', posts_path %>
+    <div class="bckgrflvrs">
+      <div class="leftflvr">
+        <%= image_tag "flvrbgl.svg" %>
+      </div>
+      <div class="bacgrleafs">
+        <div class="leftleaf">
+          <%= image_tag "leafsleft.svg" %>
         </div>
-        <% if user_signed_in? && current_user.isadmin == true %>
-          <div class="edition">
-            <%= link_to 'Редактировать', edit_post_path(@post) %>
-            <%= link_to 'Удалить', @post, method: :delete %>
-          </div>
-        <% end %>
+        <div class="rightleaf">
+          <%= image_tag "leafsright.svg" %>
+        </div>
       </div>
-
-      <div class="favs">
-         <% if user_signed_in? %>
-
-        <% pre_favorite = @post.favorites.find { |favorite| favorite.user_id == current_user.id} %>
-        <% if pre_favorite %>
-            <%= button_to '', post_favorite_path(@post, pre_favorite), class: "dislike", method: :delete %>
-        <% else %>
-            <%= button_to '', post_favorites_path(@post), method: :post %>
-        <% end %>
-        <% end %>
-
-
+      <div class="rightflvr">
+        <%= image_tag "flvrbgr.svg" %>
       </div>
     </div>
-
-    <div class="allcontent">
-
-      <h3 class="name">
-        <%= @post.name %>
-      </h3>
-      <!-- <h3>
-       <%= @post.author %>
-      </h3> -->
-      <h3 class="title">
-        <%= @post.title %>
-      </h3>
-
-      <div class="skazka">
-        <%= @post.content.html_safe %>
-      </div>
-
-          <div class="comments">
-            <h2>Комментарии</h2>
-            <%= render @post.comments %>
-            <% if user_signed_in? %>
-            <%= render "comments/form" %>
-            <% else %>
-              <p>Please <%= link_to 'login', new_user_session_path %> or <%= link_to 'register', new_user_registration_path %> to comment.</p>
-            <% end %>
-          </div>
+    <div class="right">
+      <%= image_tag "bacgrright.svg" %>
     </div>
   </div>
+  <section>
+    <div class="postarch"></div>
+    <div class="content">
+      <%= react_component 'O_The_tale', post: @post %>
+      <div class="else">
+        <div class="favs">
+           <% if user_signed_in? %>
+            <% pre_favorite = @post.favorites.find { |favorite| favorite.user_id == current_user.id} %>
+              <% if pre_favorite %>
+                  <%= button_to '', post_favorite_path(@post, pre_favorite), class: "dislike", method: :delete %>
+              <% else %>
+                  <%= button_to '', post_favorites_path(@post), method: :post %>
+              <% end %>
+          <% end %>
+        </div>
+        <div class="sharing"></div>
+      </div>
+    </div>
+  </section>
 </section>

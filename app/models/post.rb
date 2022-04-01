@@ -1,5 +1,9 @@
 class Post < ApplicationRecord
 
+  scope :filter_by_starts_with, -> (name) { where("name like ?", "%#{name}%")}
+  scope :filter_by_user, -> (user) { where user: user }
+  # scope :filter_by_category, -> (category) { where category: category }
+
   belongs_to :status
   belongs_to :user
   validates :name, :presence => true
@@ -12,6 +16,5 @@ class Post < ApplicationRecord
   # has_many :likes, dependent: :destroy
   has_many :favorites, dependent: :destroy
 
-  scope :filter_by_starts_with, -> (name) { where("name like ?", "%#{name}%")}
-  # mount_uploader :image, ImageUploader
+  mount_uploader :image, ImageUploader
 end

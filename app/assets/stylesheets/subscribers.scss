@@ -2,205 +2,205 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.subscribers{
-  margin-top: 9vw;
-  margin-left: 22.917vw;
-  width: 73.75vw;
-  min-height: 100vh;
-  .head_button{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    h2{
-      font-size: 2.361vw;
-      font-weight: 700;
-      margin: 0;
-    }
-  }
-  .filter_panel_users{
-    display: flex;
-    flex-direction: row;
-    margin-top: 3.472vw;
-    .sort_by{
-      font-size: 1.250vw;
-      font-weight: 600;
-    }
-    .cathegories{
-      display: flex;
-      flex-direction: row;
-      margin-left: 1.736vw;
-      p{
-        font-size: 1.250vw;
-        color: #666;
-        margin: 0 3.472vw 0 0;
-        cursor: pointer;
-      }
-    }
-  }
-  .postsection_users{
-    margin-top: 2.292vw;
-    .list_head{
-      display: flex;
-      flex-direction: row;
-      width: 73.750vw;
-      height: auto;
-      background: #ddd;
-      border-radius: 0.417vw;
-      margin-bottom: 2.222vw;
-      div{
-         width: calc(100% / 5);
-        p{
-          font-size: 1.111vw;
-          line-height: 1.319vw;
-          font-weight: 600;
-          padding: 1.181vw 2.917vw;
-          margin: 0;
-        }
-      }
-    }
-    .list_body{
-      display: flex;
-      flex-direction: row;
-      width: 73.750vw;
-      height: auto;
-      background: #fff;
-      border-radius: 0.417vw;
-      margin-bottom: 1.042vw;
-      transition: .5s;
-      div {
-        width: calc(100% / 5);
-      }
-      .avatar, .username, .email, .date_s, .status{
-        padding: 2.639vw 2.917vw;
-        display: inline-block;
-        text-align: left;
-        display: flex;
-        align-items: center;
-      }
-      .avatar{
-        .icon{
-          width: 5.278vw;
-          height: 5.278vw;
-          border-radius: 50%;
-          background: #C4C4C4;
-        }
-      }
-      .date_s{
-        color: #aaa;
-      }
-    }
-    .profile{
-      display: flex;
-      flex-direction: row;
-      margin-top: 3.819vw;
-      .avatar_m{
-        width: 10.764vw;
-        height: 10.764vw;
-        background: #c8c8c8;
-        border-radius: 50%;
-      }
-      .information{
-        margin-left: 1.736vw;
-        h4{
-          font-size: 1.667vw;
-          margin-bottom: 0;
-          margin-top: 1vw;
-        }
-        p{
-          font-size: 1.250vw;
-          margin-top: 0.347vw;
-        }
-        h6{
-          font-size: 1.250vw;
-          margin-top: 0.347vw;
-          color: #aaa;
-          margin-bottom: 0;
-        }
-        .reg_date{
-          display: flex;
-          flex-direction: row;
-          margin-top: 1.736vw;
-          h5{
-            font-size: 1.111vw;
-            margin: 0;
-          }
-          p{
-            font-size: 1.111vw;
-            margin-left: 0.694vw;
-            margin-top: -.01vw;
-            color: #666;
-          }
-        }
-      }
-    }
-    .saved{
-      margin-top: 4.167vw;
-      h2{
-        font-size: 1.250vw;
-        margin: 0;
-      }
-      .post_s{
-        margin-top: 1.736vw;
-        width: 23.264vw;
-        height: 23.264vw;
-        background: #fff;
-        border-radius: 1.250vw;
-        position: relative;
-        padding-left: 2.083vw;
-        .skz_t{
-          position: absolute;
-          bottom: 2.083vw;
-          h1{
-            font-size: 2.431vw;
-            margin-bottom: 0;
-            line-height: 2.083vw;
-          }
-          p{
-            font-size: 1.250vw;
-            color: #808080;
-            margin-top: 0.694vw;
-            margin-bottom: 0;
-          }
-        }
-      }
-    }
-  }
-}
+// .subscribers{
+//   margin-top: 9vw;
+//   margin-left: 22.917vw;
+//   width: 73.75vw;
+//   min-height: 100vh;
+//   .head_button{
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     h2{
+//       font-size: 2.361vw;
+//       font-weight: 700;
+//       margin: 0;
+//     }
+//   }
+//   .filter_panel_users{
+//     display: flex;
+//     flex-direction: row;
+//     margin-top: 3.472vw;
+//     .sort_by{
+//       font-size: 1.250vw;
+//       font-weight: 600;
+//     }
+//     .cathegories{
+//       display: flex;
+//       flex-direction: row;
+//       margin-left: 1.736vw;
+//       p{
+//         font-size: 1.250vw;
+//         color: #666;
+//         margin: 0 3.472vw 0 0;
+//         cursor: pointer;
+//       }
+//     }
+//   }
+//   .postsection_users{
+//     margin-top: 2.292vw;
+//     .list_head{
+//       display: flex;
+//       flex-direction: row;
+//       width: 73.750vw;
+//       height: auto;
+//       background: #ddd;
+//       border-radius: 0.417vw;
+//       margin-bottom: 2.222vw;
+//       div{
+//          width: calc(100% / 5);
+//         p{
+//           font-size: 1.111vw;
+//           line-height: 1.319vw;
+//           font-weight: 600;
+//           padding: 1.181vw 2.917vw;
+//           margin: 0;
+//         }
+//       }
+//     }
+//     .list_body{
+//       display: flex;
+//       flex-direction: row;
+//       width: 73.750vw;
+//       height: auto;
+//       background: #fff;
+//       border-radius: 0.417vw;
+//       margin-bottom: 1.042vw;
+//       transition: .5s;
+//       div {
+//         width: calc(100% / 5);
+//       }
+//       .avatar, .username, .email, .date_s, .status{
+//         padding: 2.639vw 2.917vw;
+//         display: inline-block;
+//         text-align: left;
+//         display: flex;
+//         align-items: center;
+//       }
+//       .avatar{
+//         .icon{
+//           width: 5.278vw;
+//           height: 5.278vw;
+//           border-radius: 50%;
+//           background: #C4C4C4;
+//         }
+//       }
+//       .date_s{
+//         color: #aaa;
+//       }
+//     }
+//     .profile{
+//       display: flex;
+//       flex-direction: row;
+//       margin-top: 3.819vw;
+//       .avatar_m{
+//         width: 10.764vw;
+//         height: 10.764vw;
+//         background: #c8c8c8;
+//         border-radius: 50%;
+//       }
+//       .information{
+//         margin-left: 1.736vw;
+//         h4{
+//           font-size: 1.667vw;
+//           margin-bottom: 0;
+//           margin-top: 1vw;
+//         }
+//         p{
+//           font-size: 1.250vw;
+//           margin-top: 0.347vw;
+//         }
+//         h6{
+//           font-size: 1.250vw;
+//           margin-top: 0.347vw;
+//           color: #aaa;
+//           margin-bottom: 0;
+//         }
+//         .reg_date{
+//           display: flex;
+//           flex-direction: row;
+//           margin-top: 1.736vw;
+//           h5{
+//             font-size: 1.111vw;
+//             margin: 0;
+//           }
+//           p{
+//             font-size: 1.111vw;
+//             margin-left: 0.694vw;
+//             margin-top: -.01vw;
+//             color: #666;
+//           }
+//         }
+//       }
+//     }
+//     .saved{
+//       margin-top: 4.167vw;
+//       h2{
+//         font-size: 1.250vw;
+//         margin: 0;
+//       }
+//       .post_s{
+//         margin-top: 1.736vw;
+//         width: 23.264vw;
+//         height: 23.264vw;
+//         background: #fff;
+//         border-radius: 1.250vw;
+//         position: relative;
+//         padding-left: 2.083vw;
+//         .skz_t{
+//           position: absolute;
+//           bottom: 2.083vw;
+//           h1{
+//             font-size: 2.431vw;
+//             margin-bottom: 0;
+//             line-height: 2.083vw;
+//           }
+//           p{
+//             font-size: 1.250vw;
+//             color: #808080;
+//             margin-top: 0.694vw;
+//             margin-bottom: 0;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
-.buttons{
-  display: flex;
-  flex-direction: row;
-}
-.edition_s{
-  width: 11vw;
-  height: 2.381vw;
-  border-radius: 2.679vw;
-  background: #000;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-left: 1.488vw;
-  a{
-    margin-top: 0.417vw;
-    font-size: 1.190vw;
-    font-weight: 600;
-    color: #fff;
-    text-decoration: none;
-  }
-}
-.back{
-  width: 6vw;
-  height: 2.381vw;
-  border-radius: 2.679vw;
-  background: #000;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  a{
-    margin-top: 0.417vw;
-    font-size: 1.190vw;
-    font-weight: 600;
-    color: #fff;
-    text-decoration: none;
-  }
-}
+// .buttons{
+//   display: flex;
+//   flex-direction: row;
+// }
+// .edition_s{
+//   width: 11vw;
+//   height: 2.381vw;
+//   border-radius: 2.679vw;
+//   background: #000;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   margin-left: 1.488vw;
+//   a{
+//     margin-top: 0.417vw;
+//     font-size: 1.190vw;
+//     font-weight: 600;
+//     color: #fff;
+//     text-decoration: none;
+//   }
+// }
+// .back{
+//   width: 6vw;
+//   height: 2.381vw;
+//   border-radius: 2.679vw;
+//   background: #000;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   a{
+//     margin-top: 0.417vw;
+//     font-size: 1.190vw;
+//     font-weight: 600;
+//     color: #fff;
+//     text-decoration: none;
+//   }
+// }

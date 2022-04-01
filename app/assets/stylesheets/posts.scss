@@ -1,239 +1,141 @@
-$black: #000;
-$margin: 4.167vw;
-
-body{
-  background: #F1F1F1;
-  font-family: 'Proxima Nova';
-}
-
-// styles for post viewing
-.postbody
-{
+//skazka page
+.maintale{
   display: flex;
-  flex-direction: row;
-  .visible{
-    width: 73.75vw;
-    margin-left: 22.917vw;
-    margin-top: 9vw;
-      .postlinks{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        .buttons{
-          display: flex;
-          flex-direction: row;
-        }
-        .edition{
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          margin-left: 1.488vw;
-          a{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            width: auto;
-            padding: 0.4vw  1vw;
-            height: 2.381vw;
-            border-radius: 2.679vw;
-            background: #000;
-            font-size: 1.190vw;
-            font-weight: 600;
-            color: #fff;
-            text-decoration: none;
-            margin-right: 1.488vw;
-          }
-        }
-        .back{
-          width: 6vw;
-          height: 2.381vw;
-          border-radius: 2.679vw;
-          background: $black;
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          a{
-            margin-top: 0.417vw;
-            font-size: 1.190vw;
-            font-weight: 600;
-            color: #fff;
-            text-decoration: none;
-          }
-        }
-      }
-      .allcontent{
-        margin-top: $margin;
-        .name{
-          font-size: 3.810vw;
-          font-weight: 700;
-          margin-bottom: 0;
-        }
-        .title{
-          font-size: 1.071vw;
-          font-weight: 600;
-          color: grey;
-          margin-top: 0;
-        }
-        .skazka{
-          width: 60vw;
-          height: auto;
-          margin-top: 2.679vw;
-          font-size: 1.190vw;
-          font-weight: 400;
-        }
-      }
-      .favs{
-        background: none;
-        width: 45px;
-        height: 45px;
-        margin-left: 1vw;
-        form{
-          width: 45px;
-          height: 45px;
-          margin-left: 0;
-          background: none;
-          background: {
-             image: asset_url("bookmark-plus.svg");
-          }
-          background-size: 100%;
-          color: #fff;
-          border: none;
-          cursor: pointer;
-          border-radius: 0;
-          input[type="submit"]{
-            width: 45px;
-            height: 45px;
-            margin: 0;
-            padding: 0;
-          }
-        }
-        .dislike{
-          background: {
-             image: asset_url("bookmark-fill.svg");
-          }
-          background-size: 100%;
-        }
-      }
-  }
-}
-
-// styles for editing/creating post
-.newpost, .editpost{
-  height: 100vw;
-  width: 73.75vw;
-  margin-left: 3.472vw;
-  margin-top: 9vw;
-  .back{
-    width: 6vw;
-    height: 2.381vw;
-    border-radius: 2.679vw;
-    background: $black;
+  justify-content: center;
+  margin-bottom: 4.167vw;
+  .skazka_container{
+    width: 62.500vw;
+    margin-top: 23.611vw; //пока не разберусь с бэкграундом
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    a{
-      margin-top: 0.417vw;
-      font-size: 1.190vw;
-      font-weight: 600;
-      color: #fff;
-      text-decoration: none;
+    flex-direction: column;
+    align-items: center;
+    h1{
+      font-family: '21 Cent';
+      font-weight: 400;
+      font-size: 4.861vw;
+      line-height: 89.84%;
+      text-align: center;
+      color: #ECE1CF;
+      width: 48.611vw;
+      margin-bottom: 0.694vw;
+    }
+    h3{
+      font-family: 'Proxima Nova';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.389vw;
+      line-height: 89.84%;
+      color: #ECE1CF;
+
+    }
+    p{
+      font-family: '21 Cent';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.389vw;
+      line-height: 140%;
+      color: #ECE1CF;
     }
   }
 }
 
-// styles for editing/creating post form
-.newpost, .editpost{
-  margin-left: 22.917vw;
-  .postform{
-    margin-top: 2.778vw;
-    form{
-      display: flex;
-      flex-direction: column;
-      background: none;
+//library page
+.skazka{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 14.583vw;
+  h3{
+    font-family: 'Proxima Nova';
+    font-weight: 600;
+    font-size: 2.5vw;
+    line-height: 120%;
+    color: #ECE1CF;
+    margin: 0 1.38vw;
+    text-align: center;
+    margin-bottom: 4.167vw;
+  }
+  .change_set{
+    width: 20vw;
+    height: 3.194vw;
+    background: #ECE1CF;
+    border-radius: 6.042vw;
+    margin-bottom: 6.944vw;
+    .talesb{
+      font-family: 'Proxima Nova';
+      height: 100%;
+      width: 9vw;
+      background: #101010;
+      border-radius: 6.042vw;
+      outline: none;
+      color: #ECE1CF;
       margin: 0;
-      .information{
-        display: flex;
-        flex-direction: row;
-      }
-      .one_1, .two_2{
-        display: flex;
-        flex-direction: column;
-        .field{
-          margin-bottom: 1.736vw;
-          display: flex;
-          flex-direction: column;
-          input[type="text"]{
-            width: 29.167vw;
-            height: 2.778vw;
-            border-radius: 0.347vw;
-            border: none;
-            padding: 0 1.042vw;
-            font-size: 1.111vw;
-          }
-          label{
-            font-size: 1.111vw;
-            margin-bottom: 0.694vw;
-            color: #555;
-          }
-        }
-      }
-      .two_2{
-        margin-left: 3.125vw;
-        .field{
-          select{
-            width: 29.167vw;
-            height: 2.778vw;
-            border-radius: 0.347vw;
-            border: none;
-            padding-right: 2vw;
-            padding-left: 1.042vw;
-            font-size: 1.111vw;
-          }
-        }
-      }
-      .textarea{
-        display: flex;
-        .content{
-          label{
-            font-size: 1.111vw;
-            color: #555;
-          }
-          textarea{
-            margin-top: 0.694vw;
-            height: 20vw;
-            width: 61.111vw;
-            border-radius: 0.347vw;
-            border: none;
-            font-size: 1.111vw;
-            padding: 1vw;
-            font-family: 'Proxima Nova';
-          }
-        }
-        .actions{
-          position: relative;
-          input[type="submit"]{
-            position: absolute;
-            bottom: 0;
-            width: auto;
-            padding: 0 1vw;
-            height: 2.381vw;
-            border-radius: 2.679vw;
-            background: $black;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            font-size: 1.190vw;
-            font-weight: 600;
-            color: #fff;
-            text-decoration: none;
-            margin-left: 2.92vw;
-            margin-right: 0;
-          }
-        }
-      }
+      text-decoration: none;
+      border: 1px solid #ECE1CF;
+      font-weight: 400;
+      font-size: 1.389vw;
+      line-height: 89.84%;
+    }
+    .taless{
+      font-family: 'Proxima Nova';
+      height: 100%;
+      width: 9vw;
+      background: transparent;
+      color: #101010;
+      margin: 0;
+      text-decoration: none;;
+      font-weight: 400;
+      font-size: 1.389vw;
+      line-height: 89.84%;
+      border: none;
+    }
+  }
+  .filter{
+    display: flex;
+    width: 40.278vw;
+    justify-content: space-between;
+    margin-bottom: 4.167vw;
+    .sortby{
+      font-weight: 600;
+    }
+    p, .sortby{
+      font-family: 'Proxima Nova';
+      font-size: 1.250vw;
+      line-height: 89.84%;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #ECE1CF;
+    }
+  }
+  .infifniteload{
+    margin-bottom: 6.944vw;
+    img{
+      width: 4.167vw;
+      height: 4.167vw;
+      -webkit-animation: rotate 2.2s linear infinite;
+      animation: rotate 2.2s linear infinite;
     }
   }
 }
-.Black{
-  background: #000;
+
+// the tale itself
+.taleitself{
+  .postarch{
+    background: {
+      image: asset_url("arch.svg");
+    }
+    background-size: 105%;
+    background-position: top;
+    top: 6.5vw;
+    width: 100%;
+    height: 85vh;
+    position: absolute;
+    z-index: 2;
+  }
+  .content{
+    position: relative;
+    z-index: 3;
+  }
+
 }

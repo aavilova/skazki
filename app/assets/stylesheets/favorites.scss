@@ -1,3 +1,102 @@
 // Place all the styles related to the favorites controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.taleitself{
+  .bckgr{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    top: -29vw;
+    left: -58.5vw;
+    align-items: baseline;
+    .left, .right{
+      img{
+        width: 110.481vw;
+      }
+    }
+    .bckgrflvrs{
+      .bacgrleafs{
+        width: 160.528vw;
+        display: flex;
+        position: absolute;
+        justify-content: space-around;
+        z-index: 4;
+        top: 7vw;
+        .leftleaf{
+          animation: lfleft 6s infinite;
+        }
+        .rightleaf{
+          animation: lfright 6s infinite;
+        }
+      }
+      width: 126.528vw;
+      display: flex;
+      position: absolute;
+      justify-content: space-around;
+      z-index: 3;
+      top: 25vw;
+      .rightflvr, .leftflvr{
+        img{
+          width: 45.889vw;
+        }
+      }
+    }
+    .rightflvr{
+      animation: rotateright 10s infinite;
+    }
+    .leftflvr{
+      animation: rotateleft 10s infinite;
+    }
+    .left{
+      animation: rotate1 8s infinite;
+    }
+    .right{
+      margin-top: 4vw;
+      animation: rotate2 8s infinite;
+    }
+  }
+  .else{
+    width: 44vw;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6.944vw;
+    .favs{
+      form{
+        width: auto;
+        height: auto;
+        background: transparent;
+        margin: 0;
+        input{
+          width: 1.611vw;
+          height: 2.25vw;
+          background-size: 100%;
+          background-position: center;
+          background:{
+            image: asset_url("unsaved.svg");
+          }
+        }
+        .dislike{
+          width: 1.611vw;
+          height: 2.25vw;
+          background-size: 100%;
+          background-position: center;
+          background:{
+            image: asset_url("saved.svg");
+          }
+        }
+      }
+    }
+    .sharing{
+      cursor: pointer;
+      width: 1.611vw;
+      height: 1.95vw;
+      background-size: 100%;
+      background-position: center;
+      background:{
+        image: asset_url("sharelinks.svg");
+      }
+    }
+  }
+}

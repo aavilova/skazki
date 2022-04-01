@@ -1,0 +1,37 @@
+// Place all the styles related to the Saved controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.saved{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .saved_posts{
+    margin-top: 9.028vw;
+    margin-bottom: 6.944vw;
+    h1{
+      font-family: '21 Cent';
+      font-style: italic;
+      font-weight: 400;
+      font-size: 4.861vw;
+      line-height: 89.84%;
+      color: #ECE1CF;
+      text-align: center;
+      margin-bottom: 1.389vw;
+    }
+    p{
+      font-family: 'Proxima Nova';
+      font-weight: 400;
+      font-size: 1.250vw;
+      line-height: 120.84%;
+      text-align: center;
+      color: #ECE1CF;
+    }
+  }
+  .saved_tales{
+    .booksblock{
+      .firstblock, .secondblock{
+        justify-content: flex-start;
+      }
+    }
+  }
+}

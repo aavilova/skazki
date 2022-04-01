@@ -14,17 +14,85 @@
     <% end %>
   </head>
 
+
   <body>
 
-    <div class="top_menu">
-      <% if user_signed_in? %>
-        <%= link_to 'Аккаунт', current_user %> | <%= link_to 'Выход', destroy_user_session_path, method: :delete %>
-      <% else %>
-        <%= link_to 'Вход', new_user_session_path %> | <%= link_to 'Регистрация', new_user_registration_path %>
-      <% end %>
-    </div>
+      <%= react_component('O_Header', current_user: current_user) %>
 
-  
-    <%= yield %>
+      <div class="blackscreen hidden transition"></div>
+<%= yield %>
+
+    <%= react_component 'O_Footer' %>
   </body>
 </html>
+<script type="text/javascript">
+
+  $(document).ready(function(){
+
+    let move = document.getElementsByClassName('puppil_s');
+    let move2 = document.getElementsByClassName('puppils');
+    let move3 = document.getElementsByClassName('puppil');
+
+    document.onmousemove = function(){
+
+      let x = event.clientX * 80 / window.innerWidth + '%';
+      let y = event.clientY * 40 / window.innerHeight + '%';
+
+      for(let i=0; i<2; i++){
+        move2[i].style.left = x;
+        move2[i].style.top = y;
+        move2[i].style.transform = 'translate(-'+x+',(-'+y+' - 0px))';
+      };
+      for(let i=0; i<2; i++){
+        move[i].style.left = x;
+        move[i].style.top = y;
+        move[i].style.transform = 'translate(-'+x+',(-'+y+' - 0px))';
+      };
+      for(let i=0; i<2; i++){
+        move3[i].style.left = x;
+        move3[i].style.top = y;
+        move3[i].style.transform = 'translate(-'+x+',(-'+y+' - 0px))';
+      };
+    };
+
+    $(".frst").click(function(){
+      $(".scnd p, .thrd p").removeClass("active");
+      $(".frst p").addClass("active");
+      $(".password, .privacy").addClass("display");
+      $(".subscribtion").removeClass("display")
+    })
+    $(".scnd").click(function(){
+      $(".frst p, .thrd p").removeClass("active");
+      $(".scnd p").addClass("active");
+      $(".subscribtion, .privacy").addClass("display")
+      $(".password").removeClass("display")
+    })
+    $(".thrd").click(function(){
+      $(".frst p, .scnd p").removeClass("active");
+      $(".thrd p").addClass("active");
+      $(".subscribtion, .password").addClass("display")
+      $(".privacy").removeClass("display")
+    })
+
+    $(".search, .blackscreen").click(function(){
+      $(".left_links a, .blackscreen, .search_component").toggleClass("transition");
+      setTimeout(function(){
+        $(".left_links a, .search_component, .search, .blackscreen").toggleClass("hidden");
+      }, 300);
+    });
+
+    $(".slidel").click(function(){
+      $(".booksblock > div").css({
+        'transform': 'translateX(-22.917vw)',
+        'transition': 'all 0.4s ease'
+      });
+    })
+    $(".slider").click(function(){
+      $(".booksblock > div").css({
+        'transform': 'translateX(0)',
+        'transition': 'all 0.4s ease'
+      });
+    })
+  });
+
+</script>
