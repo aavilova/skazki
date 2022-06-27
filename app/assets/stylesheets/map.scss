@@ -1,0 +1,207 @@
+// Place all the styles related to the Map controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.wholemap{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10.417vw;
+  p{
+    font-family: 'Proxima Nova';
+    font-weight: 400;
+    font-size: 1.250vw;
+    line-height: 120.84%;
+    text-align: center;
+    color: #ECE1CF;
+    margin-bottom: 6.944vw;
+  }
+  .regs{
+    width: 100%;
+    .t, .a, .ch, .bb, .ya {
+      display: inline-block;
+    }
+    .uno{
+      display: flex;
+      .t{
+        margin-left: 18.056vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 18vw;
+        height: 19.1vw;
+        background: {
+          image: asset_url("tatt.svg");
+        }
+        background-position: center;
+        background-size: 100%;
+        img{
+          width: 18vw;
+          position: absolute;
+          opacity: 0;
+          transition: .1s;
+        }
+        img:hover{
+          opacity: 1;
+          transition: .1s;
+        }
+        p{
+          z-index: 10;
+          margin-top: 7vw;
+          font-family: 'Proxima Nova';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 1.667vw;
+          line-height: 124%;
+          text-align: center;
+          color: #ECE1CF;
+
+        }
+      }
+      .a{
+        margin-left: 5.056vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 16vw;
+        height: 16vw;
+        background: {
+          image: asset_url("agg.svg");
+        }
+        background-position: center;
+        background-size: 100%;
+        img{
+          width: 16vw;
+          position: absolute;
+          opacity: 0;
+          transition: .1s;
+        }
+        img:hover{
+          opacity: 1;
+          transition: .1s;
+        }
+        p{
+          z-index: 10;
+          margin-top: 7vw;
+          font-family: 'Proxima Nova';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 1.667vw;
+          line-height: 124%;
+          text-align: center;
+          color: #ECE1CF;
+        }
+      }
+      .ya{
+        margin-top: 5vw;
+        margin-left: 5.056vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20vw;
+        height: 20.2vw;
+        background: {
+          image: asset_url("yak.svg");
+        }
+        background-position: center;
+        background-size: 100%;
+        img{
+          width: 20vw;
+          position: absolute;
+          opacity: 0;
+          transition: .1s;
+        }
+        img:hover{
+          opacity: 1;
+          transition: .1s;
+        }
+        p{
+          z-index: 10;
+          margin-top: 7vw;
+          font-family: 'Proxima Nova';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 1.667vw;
+          line-height: 124%;
+          text-align: center;
+          color: #ECE1CF;
+
+        }
+      }
+    }
+    .dos{
+      margin-top: -3vw;
+      display: flex;
+      margin-bottom: 6.944vw;
+      .ch{
+        margin-left: 23.056vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 18vw;
+        height: 14.6vw;
+        background: {
+          image: asset_url("ch.svg");
+        }
+        background-position: center;
+        background-size: 100%;
+        img{
+          width: 18vw;
+          position: absolute;
+          opacity: 0;
+          transition: .1s;
+        }
+        img:hover{
+          opacity: 1;
+          transition: .1s;
+        }
+        p{
+          z-index: 10;
+          margin-top: 7vw;
+          font-family: 'Proxima Nova';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 1.667vw;
+          line-height: 124%;
+          text-align: center;
+          color: #ECE1CF;
+
+        }
+      }
+      .bb{
+        margin-left: 5.056vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 16vw;
+        height: 8vw;
+        background: {
+          image: asset_url("bbb.svg");
+        }
+        background-position: center;
+        background-size: 100%;
+        img{
+          width: 16vw;
+          position: absolute;
+          opacity: 0;
+          transition: .1s;
+        }
+        img:hover{
+          opacity: 1;
+          transition: .1s;
+        }
+        p{
+          z-index: 10;
+          margin-top: 8vw;
+          font-family: 'Proxima Nova';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 1.667vw;
+          line-height: 124%;
+          text-align: center;
+          color: #ECE1CF;
+        }
+      }
+    }
+  }
+
+}

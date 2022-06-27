@@ -1,0 +1,233 @@
+<section class="fullpage">
+  <div class="bckgr">
+    <div class="left">
+      <%= image_tag "bacgrleft.svg" %>
+    </div>
+    <div class="bckgrflvrs">
+      <div class="leftflvr">
+        <%= image_tag "flvrbgl.svg" %>
+      </div>
+      <div class="bacgrleafs">
+        <div class="leftleaf">
+          <%= image_tag "leafsleft.svg" %>
+        </div>
+        <div class="rightleaf">
+          <%= image_tag "leafsright.svg" %>
+        </div>
+      </div>
+      <div class="rightflvr">
+        <%= image_tag "flvrbgr.svg" %>
+      </div>
+    </div>
+    <div class="right">
+      <%= image_tag "bacgrright.svg" %>
+    </div>
+  </div>
+  <section class="mainbody">
+    <section class="taleoftheday">
+      <div class="headname">
+        <div class="frame">
+          <div class="flvrs">
+            <%= image_tag "flvr1.svg" %>
+          </div>
+          <h3>Сказка дня</h3>
+          <div class="flvrs">
+            <%= image_tag "flvr2.svg" %>
+          </div>
+        </div>
+        <div class="title">
+          <h1>Ласточка и комар</h1>
+          <p>Удмуртская сказка</p>
+          <%= image_tag "skazka.gif" %>
+          <%= link_to 'Читать', post_path(5) %>
+        </div>
+      </div>
+    </section>
+
+    <section class="popular_tales">
+      <div class="frame">
+        <div class="flvrs">
+          <%= image_tag "flvrssection1.svg" %>
+        </div>
+        <h3>Популярные сказки</h3>
+        <div class="flvrs">
+          <%= image_tag "flvrssection2.svg" %>
+        </div>
+      </div>
+      <div class="populartales">
+        <div class="slider">
+          <%= image_tag "slideright.svg" %>
+        </div>
+        <%= react_component 'O_Popular_tales', posts: @posts %>
+        <div class="slidel">
+          <%= image_tag "slideleft.svg" %>
+        </div>
+      </div>
+    </section>
+
+    <section class="map">
+      <div class="frame">
+        <div class="flvrs">
+          <%= image_tag "flvrsmapl.svg" %>
+        </div>
+        <h3>Народы</h3>
+        <div class="flvrs">
+          <%= image_tag "flvrsmapr.svg" %>
+        </div>
+      </div>
+      <p>Выберите любой народ и&nbsp;путешествуйте по&nbsp;его сказочному миру</p>
+      <div class="regs">
+        <div class="uno">
+          <div class="t">
+            <%= image_tag "tta.svg" %>
+            <p>Татары</p>
+          </div>
+          <div class="a">
+            <%= image_tag "aad.svg" %>
+            <p>Адыгейцы</p>
+          </div>
+          <div class="ya">
+            <%= image_tag "yaa.svg" %>
+            <p>Якуты</p>
+          </div>
+        </div>
+        <div class="dos">
+          <div class="ch">
+            <%= image_tag "cca.svg" %>
+            <p>Чуваши</p>
+          </div>
+          <div class="bb">
+            <%= image_tag "bba.svg" %>
+            <p>Башкиры</p>
+          </div>
+        </div>
+    </section>
+
+    <section class="searchblock">
+      <%= react_component 'O_Searchblock' %>
+    </section>
+
+    <section class="interesting_tales">
+      <div class="frame">
+        <div class="flvrs">
+          <%= image_tag "flvrssection_r1.svg" %>
+        </div>
+        <h3>Может быть интересно</h3>
+        <div class="flvrs">
+          <%= image_tag "flvrssection_l1.svg" %>
+        </div>
+      </div>
+
+      <div class="maybeinteresting">
+        <div class="slider">
+          <%= image_tag "slideright.svg" %>
+        </div>
+        <%= react_component 'O_Popular_tales', posts: @posts %>
+        <div class="slidel">
+          <%= image_tag "slideleft.svg" %>
+        </div>
+      </div>
+    </section>
+
+    <section class="region_tales">
+      <div class="frame">
+        <div class="flvrs">
+          <%= image_tag "flvrssection_r1.svg" %>
+        </div>
+        <h3>Подборки по регионам</h3>
+        <div class="flvrs">
+          <%= image_tag "flvrssection_l1.svg" %>
+        </div>
+      </div>
+
+      <div class="sliderset">
+        <%= image_tag "slideright.svg" %>
+      </div>
+      <div class="tsets">
+        <div class="set fst">
+          <div class="descr">
+            <h1>Татарские <br>сказки</h1>
+            <p>Лучшие татарские сказки для&nbsp;детей и&nbsp;взрослых, которые могут как&nbsp;уму-разуму научить, так&nbsp;и&nbsp;просто позабавить</p>
+            <%= link_to 'Читать', tatartales_path %>
+          </div>
+          <div class="spin">
+            <div class="circle1">
+              <%= image_tag "circle1.svg" %>
+            </div>
+            <div class="circle2">
+              <%= image_tag "circle2.svg" %>
+            </div>
+            <div class="eyeball">
+              <div class="eye">
+                <div class="puppil fst"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="set sec">
+          <div class="descr">
+            <h1>Башкирские <br>сказки</h1>
+            <p>Лучшие башкирские сказки для&nbsp;детей и&nbsp;взрослых, которые могут как&nbsp;уму-разуму научить, так&nbsp;и&nbsp;просто позабавить</p>
+            <%= link_to 'Читать', bashkirtales_path %>
+          </div>
+          <div class="spin">
+            <div class="circle1">
+              <%= image_tag "circle1_1.svg" %>
+            </div>
+            <div class="circle2">
+              <%= image_tag "circle2_1.svg" %>
+            </div>
+            <div class="eyeball">
+              <div class="eye">
+                <div class="puppil sec"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slidelset">
+        <%= image_tag "slideleft.svg" %>
+      </div>
+    </section>
+
+
+    <section class="subscribtion">
+      <%= react_component 'O_Subscribe', subscriber: @subscriber %>
+    </section>
+  </section>
+
+</section>
+
+<script type="text/javascript">
+  let slideWidth =  $(".tsets").width();
+  let slideHeight =  $(".tsets .set").height();
+
+  $(".tsets").css({"max-width":slideWidth, "height": slideHeight});
+  $(".tsets .set:last-child").prependTo($(".tsets"));
+
+  function moveLeft() {
+    $(".tsets").stop().animate({
+      left: + slideWidth
+    },700, function() {
+      $(".tsets .set:last-child").prependTo($(".tsets"));
+      $(".tsets").css("left","");
+    });
+  }
+
+  function moveRight() {
+    $(".tsets").stop().animate({
+      left: - slideWidth
+    },700, function() {
+      $(".tsets .set:first-child").appendTo($(".tsets"));
+      $(".tsets").css("left","");
+    });
+  }
+
+  $(".slidelset").on("click",function(){
+    moveRight();
+  });
+
+  $(".sliderset").on("click",function(){
+    moveLeft();
+  });
+</script>

@@ -1,0 +1,549 @@
+//skazka page
+.maintale{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4.167vw;
+  .skazka_container{
+    width: 62.500vw;
+    margin-top: 23.611vw; //пока не разберусь с бэкграундом
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1{
+      font-family: '21 Cent';
+      font-weight: 400;
+      font-size: 4.861vw;
+      line-height: 89.84%;
+      text-align: center;
+      color: #ECE1CF;
+      width: 48.611vw;
+      margin-bottom: 0.694vw;
+    }
+    h3{
+      font-family: 'Proxima Nova';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.389vw;
+      line-height: 89.84%;
+      color: #ECE1CF;
+
+    }
+    p{
+      font-family: '21 Cent';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.389vw;
+      line-height: 140%;
+      color: #ECE1CF;
+    }
+  }
+}
+
+//library page
+.skazka{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 14.583vw;
+  h3{
+    font-family: 'Proxima Nova';
+    font-weight: 600;
+    font-size: 2.5vw;
+    line-height: 120%;
+    color: #ECE1CF;
+    margin: 0 1.38vw;
+    text-align: center;
+    margin-bottom: 4.167vw;
+  }
+  .change_set{
+    width: 20vw;
+    height: 3.194vw;
+    background: #ECE1CF;
+    border-radius: 6.042vw;
+    margin-bottom: 6.944vw;
+    .talesb{
+      font-family: 'Proxima Nova';
+      height: 100%;
+      width: 9vw;
+      background: #101010;
+      border-radius: 6.042vw;
+      outline: none;
+      color: #ECE1CF;
+      margin: 0;
+      text-decoration: none;
+      border: 1px solid #ECE1CF;
+      font-weight: 400;
+      font-size: 1.389vw;
+      line-height: 89.84%;
+    }
+    .taless{
+      font-family: 'Proxima Nova';
+      height: 100%;
+      width: 9vw;
+      background: transparent;
+      color: #101010;
+      margin: 0;
+      text-decoration: none;;
+      font-weight: 400;
+      font-size: 1.389vw;
+      line-height: 89.84%;
+      border: none;
+    }
+    .talesb_a{
+      font-family: 'Proxima Nova';
+      height: 100%;
+      width: 9vw;
+      background: transparent;
+      color: #101010;
+      margin: 0;
+      text-decoration: none;;
+      font-weight: 400;
+      font-size: 1.389vw;
+      line-height: 89.84%;
+      border: none;
+    }
+    .taless_a{
+      font-family: 'Proxima Nova';
+      height: 100%;
+      width:  10.6vw;
+      background: #101010;
+      border-radius: 6.042vw;
+      outline: none;
+      color: #ECE1CF;
+      margin: 0;
+      text-decoration: none;
+      border: 1px solid #ECE1CF;
+      font-weight: 400;
+      font-size: 1.389vw;
+      line-height: 89.84%;
+    }
+  }
+  .options{
+    display: flex;
+    width: 88.889vw;
+    justify-content: center;
+    .filter{
+      display: flex;
+      width: 40.278vw;
+      justify-content: space-between;
+      margin-bottom: 4.167vw;
+      .sortby{
+        font-weight: 600;
+      }
+      p, .sortby{
+        font-family: 'Proxima Nova';
+        font-size: 1.250vw;
+        line-height: 89.84%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #ECE1CF;
+      }
+    }
+    .add {
+      border: 1px solid #ECE1CF;
+      height: 3.333vw;
+      border-radius: 6vw;
+      display: flex;
+      justify-content: center;
+      width: 11vw;
+      margin-left: 37.5vw;
+      a{
+        font-family: 'Proxima Nova';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.389vw;
+        line-height: 89.84%;
+        color: #ECE1CF;
+        margin-top: 1vw;
+      }
+    }
+  }
+  .infifniteload{
+    margin-bottom: 6.944vw;
+    img{
+      width: 4.167vw;
+      height: 4.167vw;
+      -webkit-animation: rotate 2.2s linear infinite;
+      animation: rotate 2.2s linear infinite;
+    }
+  }
+}
+
+// the tale itself
+.taleitself{
+  .textedit{
+    display: none;
+    background: {
+      image: asset_url("textedit.svg");
+    }
+    background-size: 100%;
+    background-position: center;
+    width: 25vw;
+    height: 6.2vw;
+    position: fixed;
+    top: 6.5vw;
+    right: 1.944vw;
+    z-index: 5;
+    align-items: center;
+    .bg_color{
+      display: flex;
+      p{
+        margin: 1.2vw 1.111vw 0 2.5vw;
+        font-family: 'Proxima Nova';
+        font-weight: 400;
+        font-size: 1.250vw;
+      }
+      .light{
+        cursor: pointer;
+        margin-top: 1.2vw;
+        width: 1.528vw;
+        height: 1.528vw;
+        border-radius: 50%;
+        border: 1px solid #101010;
+        margin-right: 0.694vw;
+      }
+      .dark{
+        cursor: pointer;
+        margin-top: 1.2vw;
+        width: 1.528vw;
+        height: 1.528vw;
+        background: #101010;
+        border-radius: 50%;
+        margin-right: 2.778vw;
+      }
+    }
+    .font_size{
+      display: flex;
+      p{
+        margin-top: 3vw;
+        font-family: 'Proxima Nova';
+        font-weight: 400;
+        font-size: 1.250vw;
+      }
+      .edits{
+        display: flex;
+        margin-left: 1.111vw;
+        p{
+          cursor: pointer;
+          margin-top: 2.8vw;
+          margin-right: 0.6vw;
+          font-weight: 600;
+          font-size: 1.6vw;
+        }
+      }
+    }
+  }
+  .hidden{
+    display: flex;
+  }
+  .postarch{
+    background: {
+      image: asset_url("arch.svg");
+    }
+    background-size: 105%;
+    background-position: top;
+    top: 6.5vw;
+    width: 100%;
+    height: 85vh;
+    position: absolute;
+    z-index: 2;
+  }
+  .content{
+    position: relative;
+    z-index: 3;
+  }
+
+}
+
+// styles for editing/creating post form
+.postbody{
+  margin-left: 0;
+  margin-top: 9.583vw;
+  height: 100vh;
+  .newpost, .editpost{
+    margin-left: 5.208vw;
+    .back{
+      width: 8.111vw;
+      background: none;
+      border: 1px solid #ECE1CF;
+      height: 3.333vw;
+      border-radius: 6vw;
+      display: flex;
+      justify-content: center;
+      a{
+        font-family: 'Proxima Nova';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.389vw;
+        line-height: 89.84%;
+        color: #ECE1CF;
+        margin-top: 1vw;
+      }
+    }
+    .postform{
+      margin-top: 3.944vw;
+      background: none;
+      form{
+        margin: 0;
+        background: none;
+        .information{
+          .one_1{
+            .field{
+              display: flex;
+              flex-direction: column;
+            }
+            label{
+              font-family: 'Proxima Nova';
+              font-style: normal;
+              font-weight: 600;
+              font-size: 1.389vw;
+              line-height: 120%;;
+              color: #ECE1CF;
+              margin-bottom: 0.833vw;
+            }
+            input[type="file"]{
+              padding: 0;
+              width: 13.111vw;
+              background: none;
+              border: 1px solid #ECE1CF;
+              font-family: '21 Cent';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 1.389vw;
+              line-height: 140%;
+              /* or 140% */
+
+              display: flex;
+              align-items: center;
+
+              /* Семечко */
+
+              color: #101010;
+
+            }
+            input::-webkit-file-upload-button{
+              background: none;
+              width: 11.111vw;
+              background: none;
+              border: none;
+              font-family: 'Proxima Nova';
+              font-style: normal;
+              font-weight: 600;
+              font-size: 1.250vw;
+              line-height: 89.84%;
+              margin-left: 1.8vw;
+              margin-top: 1vw;
+              margin-bottom: 2vw;
+              display: flex;
+              align-items: center;
+              padding: 0;
+              color: #ECE1CF;
+            }
+            input{
+              padding: 2vw;
+              width: 26.111vw;
+              height: 3.333vw;
+              border-radius: 6vw;
+              background: #ECE1CF;
+              border: none;
+              margin-bottom: 2.778vw;
+              font-family: '21 Cent';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 1.389vw;
+              line-height: 140%;
+              /* or 140% */
+
+              display: flex;
+              align-items: center;
+
+              /* Семечко */
+
+              color: #101010;
+            }
+          }
+          .two_2{
+            .field{
+              display: flex;
+              flex-direction: column;
+            }
+            label{
+              font-family: 'Proxima Nova';
+              font-style: normal;
+              font-weight: 600;
+              font-size: 1.389vw;
+              line-height: 120%;;
+              margin-bottom: 0.833vw;
+              color: #ECE1CF;
+
+            }
+          }
+        }
+        .textarea{
+          margin-left: 8.333vw;
+          .content{
+            textarea{
+              padding: 2vw;
+              width: 46.111vw;
+              height: 21vw;
+              border-radius: 2vw;
+              background: #ECE1CF;
+              margin-bottom: 2vw;
+              font-family: '21 Cent';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 1.389vw;
+              line-height: 140%;
+              /* or 140% */
+
+              display: flex;
+              align-items: center;
+
+              /* Семечко */
+
+              color: #101010;
+            }
+          }
+          .description, .content{
+            display: flex;
+            flex-direction: column;
+            label{
+              font-family: 'Proxima Nova';
+              font-style: normal;
+              font-weight: 600;
+              font-size: 1.389vw;
+              line-height: 120%;;
+              color: #ECE1CF;
+              margin-bottom: 0.833vw;
+            }
+            input{
+
+              padding: 2vw;
+              width: 46.111vw;
+              height: 3.333vw;
+              border-radius: 6vw;
+              background: #ECE1CF;
+              border: none;
+              margin-bottom: 2.778vw;
+              font-family: '21 Cent';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 1.389vw;
+              line-height: 140%;
+              /* or 140% */
+
+              display: flex;
+              align-items: center;
+
+              /* Семечко */
+
+              color: #101010;
+            }
+          }
+          .actions{
+            input{
+              width: 13.111vw;
+              background: none;
+              border: 1px solid #ECE1CF;
+              height: 3.333vw;
+              border-radius: 6vw;
+              display: flex;
+              justify-content: center;
+              font-family: 'Proxima Nova';
+              font-style: normal;
+              font-weight: 600;
+              font-size: 1.389vw;
+              line-height: 89.84%;
+              color: #ECE1CF;
+              margin-top: 1vw;
+            }
+          }
+        }
+      }
+      // form{
+      //
+      //     .information{
+      //       .two_2{
+      //         margin-left: 3.125vw;
+      //         label{
+      //           font-size: 1.111vw;
+      //           color: #555;
+      //         }
+      //         textarea{
+      //           margin-top: 0.694vw;
+      //           height: 21.528vw;
+      //           width: 61.111vw;
+      //           border-radius: 0.347vw;
+      //           border: none;
+      //         }
+      //         .field{
+      //           select{
+      //             width: 29.167vw;
+      //             height: 2.778vw;
+      //             border-radius: 0.347vw;
+      //             border: none;
+      //             padding-right: 2vw;
+      //             padding-left: 1.042vw;
+      //             font-size: 1.111vw;
+      //           }
+      //         }
+      //       }
+      //     }
+      // .actions{
+      //   input[type="submit"]{
+      //     width: auto;
+      //     height: 2.381vw;
+      //     border-radius: 2.679vw;
+      //     background: #101010;
+      //     display: flex;
+      //     flex-direction: row;
+      //     justify-content: center;
+      //     font-size: 1.190vw;
+      //     font-weight: 600;
+      //     color: #fff;
+      //     text-decoration: none;
+      // .textarea{
+      //   display: flex;
+      //   .content{
+      //     label{
+      //       font-size: 1.111vw;
+      //       color: #555;
+      //     }
+      //     textarea{
+      //       margin-top: 0.694vw;
+      //       height: 20vw;
+      //       width: 61.111vw;
+      //       border-radius: 0.347vw;
+      //       border: none;
+      //       font-size: 1.111vw;
+      //       padding: 1vw;
+      //       font-family: 'Proxima Nova';
+      //     }
+      //   }
+        // .actions{
+        //   position: relative;
+        //   input[type="submit"]{
+        //     position: absolute;
+        //     bottom: 0;
+        //     width: auto;
+        //     padding: 0 1vw;
+        //     height: 2.381vw;
+        //     border-radius: 2.679vw;
+        //     background: #101010;
+        //     display: flex;
+        //     flex-direction: row;
+        //     justify-content: center;
+        //     font-size: 1.190vw;
+        //     font-weight: 600;
+        //     color: #fff;
+        //     text-decoration: none;
+        //     margin-left: 2.92vw;
+        //     margin-right: 0;
+        //   }
+        // }
+      // }
+    // }
+    }
+  }
+}

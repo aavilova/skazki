@@ -1,0 +1,61 @@
+// Place all the styles related to the Tatartales controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.tatartales{
+  margin: auto;
+  width: 88.889vw;
+  display: flex;
+  flex-direction: column;
+  .t_tales{
+    margin-top: 9.028vw;
+    width: 88.889vw;
+    height: 21.583vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    .about{
+      h1{
+        font-family: '21 Cent';
+        font-style: italic;
+        font-weight: 400;
+        font-size: 4.861vw;
+        line-height: 89.84%;
+        color: #ECE1CF;
+        margin-bottom: 1.389vw;
+      }
+      p{
+        width: 29.861vw;
+        font-family: 'Proxima Nova';
+        font-weight: 400;
+        font-size: 1.250vw;
+        line-height: 120.84%;
+        color: #ECE1CF;
+        margin-bottom: 4.167vw;
+      }
+    }
+    .flvrs{
+      display: inline-block;
+      margin-top: -9vw;
+      img{
+        width: 54.167vw;
+      }
+    }
+  }
+  .infifniteload{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6.944vw;
+    img{
+      width: 4.167vw;
+      height: 4.167vw;
+      -webkit-animation: rotate 2.2s linear infinite;
+      animation: rotate 2.2s linear infinite;
+    }
+  }
+  hr{
+    width: 88.889vw;
+    border: .4px solid #ECE1CF;
+    opacity: .8;
+    margin-bottom: 6.944vw;
+  }
+}

@@ -1,0 +1,2 @@
+module TatartalesHelper
+end

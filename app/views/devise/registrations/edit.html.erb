@@ -1,0 +1,94 @@
+<section class="edition_info">
+  <!-- <h2>Edit <%= resource_name.to_s.humanize %></h2> -->
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+
+
+    <div class="staticsection">
+      <div class="avatar">
+        <div class="back">
+          <%= image_tag "arrowback.svg" %>
+          <%= link_to "Вернуться в профиль", :back %>
+        </div>
+        <div class="changeavatar">
+      	    <%= f.file_field :image %>
+        </div>
+      </div>
+      <div class="userabout">
+        <div class="username">
+          <%= f.label :username, "Ник" %>
+          <%= f.text_field :username, autocomplete: "username" %>
+        </div>
+        <div class="email">
+          <%= f.label :email, "E-mail" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        </div>
+        <div class="actions">
+          <%= f.submit "Сохранить" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="activesection">
+      <div class="switchblock">
+        <div class="frst">
+          <p class="active">Подписка</p>
+        </div>
+        <div class="scnd">
+          <p>Изменить&nbsp;пароль</p>
+        </div>
+        <div class="thrd">
+          <p>Приватность</p>
+        </div>
+      </div>
+      <div class="pages">
+        <div class="subscribtion">
+          <p class="yourplan">Ваш тариф</p>
+          <h2>Free</h2>
+          <p>Вам доступен базовый весь базовый контент сервиса без возможности скачивания сказок для чтения офлайн</p>
+          <div class="change">
+            Изменить
+          </div>
+        </div>
+        <div class="password display">
+          <p>*Пароль должен содержать не менее 8 символов, в том числе заглавные и строчные буквы</p>
+          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+            <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+          <% end %>
+          <div class="current">
+            <%= f.label :current_password, "Старый пароль" %>
+            <!-- <i>(we need your current password to confirm your changes)</i> -->
+            <%= f.password_field :current_password, autocomplete: "current-password" %>
+          </div>
+
+          <div class="new">
+            <%= f.label :password, "Новый пароль"  %>
+            <!-- <i>(leave blank if you don't want to change it)</i> -->
+            <%= f.password_field :password, autocomplete: "new-password" %>
+
+          </div>
+
+          <!-- <div class="field">
+            <%= f.label :password_confirmation %>
+            <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+          </div> -->
+          <div class="actions">
+            <%= f.submit "Сохранить" %>
+            <%= link_to "Забыли пароль?", new_password_path(resource_name) %>
+          </div>
+        </div>
+        <div class="privacy display">
+          <p class="type">Тип профиля</p>
+          <h2>Открытый</h2>
+          <%= image_tag "switch.svg" %>
+          <h5>Хотите сделать ваш профиль приватным?</h5>
+          <p>*Другие пользователи не смогут посмотреть ваши подборки и сохранить их к себе</p>
+        </div>
+      </div>
+    </div>
+
+  <% end %>
+
+
+</section>

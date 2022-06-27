@@ -1,0 +1,1067 @@
+// Place all the styles related to the Styleguide controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+header{
+  width: 100%;
+  padding-top: 4.167vw;
+  padding-left: 4.167vw;
+  padding-right: 4.167vw;
+  font-family: '20Kopeek-bold';
+  position: relative;
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  .logo{
+    img{
+      width: 11.806vw;
+      display: inline-block;
+    }
+  }
+  .titles{
+    p{
+    color: #ECE1CF;
+    font-size: 1.389vw;
+    margin: 0;
+   }
+  }
+}
+.menubar_n{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  left: 4.167vw;
+  font-family: '20Kopeek-bold';
+  top: 11.111vw;
+  z-index: 100;
+  a{
+    color: #D84E00;
+    text-decoration: none;
+    margin-bottom: 1.042vw;
+    font-size: 1.250vw;
+  }
+}
+.cover{
+  width: auto;
+  height: 100vh;
+  background: #000;
+  position: relative;
+  display: flex;
+  align-items: center;
+  .eyes-container {
+    margin-left: 15vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 46.27vh;
+  width: 80.111vw;
+  .eye {
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    height: 20vw;
+    width: 35vw;
+    margin: 4vw;
+    background: #ECE1CF;
+    .ball {
+      position: absolute;
+      width: 6.944vw;
+      height: 20vw;
+      top: 1%;
+      left: 40%;
+      border-radius: 50%;
+      background: #000;
+    }
+  }
+}
+}
+.brand_about{
+  height: auto;
+  width: 100%;
+  background: #000;
+  position: relative;
+  .about_b{
+    padding-right: 4.167vw;
+    width: 100%;
+    padding-top: 11.111vw;
+    .allinside{
+      margin-left: 27vw;
+      display: flex;
+      flex-direction: row;
+      .consept{
+        h2{
+          margin: 0;
+          font-size: 1.389vw;
+          color: #ECE1CF;
+          font-family: '20Kopeek-bold';
+        }
+        p{
+          margin-top: 3.472vw;
+          width: 26vw;
+          font-size: 1.389vw;
+          color: #ECE1CF;
+          font-family: '20Kopeek-book';
+        }
+      }
+      .values{
+        margin-left: 12.153vw;
+        h2{
+          margin: 0;
+          font-size: 1.389vw;
+          color: #ECE1CF;
+          font-family: '20Kopeek-bold';
+        }
+        .list{
+          margin-top: 3.472vw;
+          li{
+            margin-bottom: 1.042vw;
+            width: 26vw;
+            font-size: 1.389vw;
+            color: #ECE1CF;
+            font-family: '20Kopeek-book';
+          }
+        }
+      }
+    }
+  }
+  .mission_b{
+    p{
+      width: 56.944vw;
+      color: #ECE1CF;
+      font-family: '20Kopeek-bold';
+      font-size: 2.500vw;
+      margin-left: 27vw;
+      margin-top: 9.722vw;
+    }
+  }
+  .personality_b{
+    h2{
+      margin-left: 27vw;
+      margin-top: 9.722vw;
+      font-size: 1.389vw;
+      color: #ECE1CF;
+      font-family: '20Kopeek-bold';
+    }
+    .prsnl{
+      margin-top: -5vw;
+      margin-left: 15vw;
+      img{
+        width: 83.5vw;
+      }
+    }
+  }
+}
+.logotip{
+  background: #ECE1CF;
+  .allinside_2{
+    margin-left: 27vw;
+    .logotip_about{
+      h2{
+        margin: 0;
+        padding-top: 11.111vw;
+        font-size: 1.389vw;
+        color: #000;
+        font-family: '20Kopeek-bold';
+      }
+      p{
+        margin-top: 3.472vw;
+        width: 26vw;
+        font-size: 1.389vw;
+        color: #000;
+        font-family: '20Kopeek-book';
+      }
+    }
+    .logotip_p{
+      h2{
+        margin-left: 0;
+        margin-top: 11.111vw;
+        font-size: 1.389vw;
+        color: #000;
+        font-family: '20Kopeek-bold';
+      }
+      .p_img {
+        margin-top: 3.472vw;
+        margin-left: 5.5vw;
+        img{
+          width: 46.875vw;
+        }
+      }
+    }
+    .calculation{
+      h2{
+        margin-left: 0;
+        margin-top: 11.111vw;
+        font-size: 1.389vw;
+        color: #000;
+        font-family: '20Kopeek-bold';
+      }
+      .calc_img {
+        margin-top: 3.472vw;
+        img{
+          width: 54.861vw;
+        }
+      }
+    }
+    .reversed{
+      h2{
+        margin-left: 0;
+        margin-top: 11.111vw;
+        font-size: 1.389vw;
+        color: #000;
+        font-family: '20Kopeek-bold';
+      }
+      .rev_img {
+        margin-top: 3.472vw;
+        img{
+          width: 54.861vw;
+        }
+      }
+    }
+    .monochrome{
+      h2{
+        margin-left: 0;
+        margin-top: 11.111vw;
+        font-size: 1.389vw;
+        color: #000;
+        font-family: '20Kopeek-bold';
+      }
+      p{
+        margin-top: 3.472vw;
+        width: 26vw;
+        font-size: 1.389vw;
+        color: #000;
+        font-family: '20Kopeek-book';
+      }
+      .chrome_img {
+        margin-top: 3.472vw;
+        img{
+          width: 54.861vw;
+        }
+      }
+    }
+    .forbidden{
+      margin-bottom: 4.167vw;
+      h2{
+        margin-left: 0;
+        margin-top: 11.111vw;
+        font-size: 1.389vw;
+        color: #000;
+        font-family: '20Kopeek-bold';
+      }
+      p{
+        margin-top: 3.472vw;
+        width: 26vw;
+        font-size: 1.389vw;
+        color: #000;
+        font-family: '20Kopeek-book';
+      }
+      .frb_img {
+        margin-top: 3.472vw;
+        img{
+          width: 54.861vw;
+        }
+      }
+    }
+  }
+}
+.colors{
+  background: #000;
+  .full_set{
+    margin-top: 12.500vw;
+    margin-left: 17vw;
+    img{
+      width: 83.153vw
+    }
+  }
+  .beads{
+    img{
+      width: 100vw;
+    }
+  }
+  .allinside_3{
+    margin-left: 27vw;
+    margin-bottom: 4.167vw;
+    .hex{
+      margin-top: 11.111vw;
+      display: flex;
+      flex-direction: row;
+      .c1{
+        .colourgroup{
+          margin-bottom: 2.083vw;
+          h3{
+            margin-left: 0;
+            margin-bottom: 0;
+            margin-top: 3vw;
+            font-size: 1.389vw;
+            color: #ECE1CF;
+            font-family: '20Kopeek-bold';
+          }
+          p{
+            margin-top: 0;
+            width: 26vw;
+            font-size: 1.389vw;
+            color: #ECE1CF;
+            font-family: '20Kopeek-book';
+          }
+        }
+      }
+      .c2{
+        .colourgroup{
+          margin-bottom: 2.083vw;
+          h3{
+            margin-left: 0;
+            margin-bottom: 0;
+            margin-top: 3vw;
+            font-size: 1.389vw;
+            color: #ECE1CF;
+            font-family: '20Kopeek-bold';
+          }
+          p{
+            margin-top: 0;
+            width: 26vw;
+            font-size: 1.389vw;
+            color: #ECE1CF;
+            font-family: '20Kopeek-book';
+          }
+        }
+      }
+    }
+    .rules{
+      h2{
+        margin-left: 0;
+        margin-top: 9.722vw;
+        font-size: 1.389vw;
+        color: #ECE1CF;
+        font-family: '20Kopeek-bold';
+      }
+      .colorset{
+        display: flex;
+        flex-direction: row;
+        p{
+          margin-top: 3.472vw;
+          width: 26vw;
+          font-size: 1.389vw;
+          color: #ECE1CF;
+          font-family: '20Kopeek-book';
+        }
+        .color_r{
+          margin-top: 4.514vw;
+          margin-left: 5.556vw;
+          img{
+            width: 26.042vw;
+          }
+        }
+      }
+    }
+    .more{
+      h2{
+        margin-left: 0;
+        margin-top: 9.722vw;
+        font-size: 1.389vw;
+        color: #ECE1CF;
+        font-family: '20Kopeek-bold';
+      }
+      p{
+        margin-top: 3.472vw;
+        width: 26vw;
+        font-size: 1.389vw;
+        color: #ECE1CF;
+        font-family: '20Kopeek-book';
+      }
+    }
+    .exmpl{
+      h2{
+        margin-left: 0;
+        margin-top: 9.722vw;
+        font-size: 1.389vw;
+        color: #ECE1CF;
+        font-family: '20Kopeek-bold';
+      }
+      .nations{
+        display: flex;
+        flex-direction: row;
+        .c_1{
+          .r{
+            p{
+              margin-top: 3.472vw;
+              width: 26vw;
+              font-size: 1.389vw;
+              color: #ECE1CF;
+              font-family: '20Kopeek-book';
+            }
+            .nation_img{
+              img{
+                width: 22.917vw;
+              }
+            }
+          }
+        }
+        .c_2{
+          margin-left: 9.722vw;
+          .r{
+            p{
+              margin-top: 3.472vw;
+              width: 26vw;
+              font-size: 1.389vw;
+              color: #ECE1CF;
+              font-family: '20Kopeek-book';
+            }
+            .nation_img{
+              img{
+                width: 22.917vw;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.fonts{
+  background: #ECE1CF;
+  .allinside_3{
+    margin-left: 27vw;
+    .fonts_example{
+      h2{
+        margin-left: 0;
+        margin-top: 11.111vw;
+        font-size: 1.389vw;
+        color: #000;
+        font-family: '20Kopeek-bold';
+      }
+      .first_font{
+        display: flex;
+        flex-direction: row;
+        p{
+          margin-top: 9.722vw;
+          width: 26vw;
+          font-size: 1.389vw;
+          color: #000;
+          font-family: '20Kopeek-book';
+        }
+        .kopeiki{
+          margin-left: 9.722vw;
+          h1{
+            margin-bottom: 0;
+            margin-top: 9.722vw;
+            font-size: 3.333vw;
+            color: #000;
+            font-family: '20Kopeek-book';
+          }
+          p{
+            margin-top: 2.083vw;
+            width: 26vw;
+            font-size: 1.389vw;
+            color: #000;
+            font-family: '20Kopeek-book';
+          }
+        }
+      }
+      .second_font{
+        display: flex;
+        flex-direction: row;
+        margin-top: 9.722vw;
+        p{
+          margin-top: 9.722vw;
+          width: 26vw;
+          font-size: 1.389vw;
+          color: #000;
+          font-family: '20Kopeek-book';
+        }
+        .crg{
+          margin-left: 9.722vw;
+          h1{
+            margin-bottom: 0;
+            margin-top: 9.722vw;
+            font-size: 3.333vw;
+            color: #000;
+            font-family: 'Craftwork-Grotesk';
+          }
+          p{
+            margin-top: 2.083vw;
+            width: 26vw;
+            font-size: 1.389vw;
+            color: #000;
+            font-family: 'Craftwork-Grotesk';
+          }
+        }
+      }
+      .third_font{
+        display: flex;
+        flex-direction: row;
+        margin-top: 9.722vw;
+        p{
+          margin-top: 9.722vw;
+          width: 26vw;
+          font-size: 1.389vw;
+          color: #000;
+          font-family: '20Kopeek-book';
+        }
+        .cent{
+          margin-left: 9.722vw;
+          h1{
+            margin-bottom: 0;
+            margin-top: 9.722vw;
+            font-size: 3.333vw;
+            color: #000;
+            font-family: '21Cent';
+          }
+          p{
+            margin-top: 2.083vw;
+            width: 26vw;
+            font-size: 1.389vw;
+            color: #000;
+            font-family: '21Cent';
+          }
+        }
+      }
+    }
+    .head{
+      h2{
+        margin-left: 0;
+        margin-top: 11.111vw;
+        font-size: 1.389vw;
+        color: #000;
+        font-family: '20Kopeek-bold';
+      }
+      .h1{
+        margin-top: 3.125vw;
+        font-size: 4.167vw;
+        line-height: 100%;
+        color: #000;
+        font-family: '20Kopeek-bold';
+        margin-bottom: 0;
+      }
+      p{
+        margin-top: 1.389vw;
+        font-size: 1.389vw;
+        font-family: '20Kopeek-book';
+        color: #000;
+      }
+    }
+    .midhead{
+      h2{
+        margin-left: 0;
+        margin-top: 11.111vw;
+        font-size: 1.389vw;
+        color: #000;
+        font-family: '20Kopeek-bold';
+      }
+      .h2{
+        margin-top: 3.125vw;
+        font-size: 2.778vw;
+        line-height: 110%;
+        color: #000;
+        font-family: '20Kopeek-bold';
+        margin-bottom: 0;
+      }
+      p{
+        margin-top: 1.389vw;
+        font-size: 1.389vw;
+        font-family: '20Kopeek-book';
+        color: #000;
+      }
+    }
+    .textm{
+      h2{
+        margin-left: 0;
+        margin-top: 11.111vw;
+        font-size: 1.389vw;
+        color: #000;
+        font-family: '20Kopeek-bold';
+      }
+      .h2{
+        margin-top: 3.125vw;
+        font-size: 1.389vw;
+        line-height: 120%;
+        color: #000;
+        font-family: '20Kopeek-book';
+        margin-bottom: 0;
+      }
+      p{
+        margin-top: 1.389vw;
+        font-size: 1.389vw;
+        font-family: '20Kopeek-book';
+        color: #000;
+      }
+    }
+    .textrules{
+      h2{
+        margin-left: 0;
+        margin-top: 11.111vw;
+        font-size: 1.389vw;
+        color: #000;
+        font-family: '20Kopeek-bold';
+      }
+      p{
+        margin-top: 3.472vw;
+        width: 26vw;
+        font-size: 1.389vw;
+        color: #000;
+        font-family: '20Kopeek-book';
+      }
+      .exmpls{
+        display: flex;
+        flex-direction: row;
+        .right{
+          p{
+            margin-left: 0;
+            margin-top: 3.125vw;
+            font-size: 1.389vw;
+            color: #000;
+            font-family: '20Kopeek-bold';
+          }
+          .hh{
+            font-size: 4.167vw;
+          }
+        }
+        .wrong{
+          margin-left: 9.722vw;
+          p{
+            color: #D84E00;
+            margin-left: 0;
+            margin-top: 3.125vw;
+            margin-bottom: 4.167vw;
+            font-size: 1.389vw;
+            font-family: '20Kopeek-bold';
+          }
+          .hh{
+            color: #D84E00;
+            font-size: 4.167vw;
+          }
+        }
+      }
+    }
+  }
+}
+.ornaments{
+  background: #000;
+  .allinside_4{
+    margin-left: 27vw;
+    .geometry{
+      h2{
+        margin-left: 0;
+        margin-top: 11.111vw;
+        font-size: 1.389vw;
+        color: #ECE1CF;
+        font-family: '20Kopeek-bold';
+      }
+      p{
+        margin-top: 3.472vw;
+        width: 26vw;
+        font-size: 1.389vw;
+        color: #ECE1CF;
+        font-family: '20Kopeek-book';
+      }
+      .g_img{
+        margin-top: 3.472vw;
+        img{
+          width: 54.861vw;
+        }
+      }
+    }
+    .national{
+      h2{
+        margin-left: 0;
+        margin-top: 11.111vw;
+        font-size: 1.389vw;
+        color: #ECE1CF;
+        font-family: '20Kopeek-bold';
+      }
+      p{
+        margin-top: 3.472vw;
+        width: 26vw;
+        font-size: 1.389vw;
+        color: #ECE1CF;
+        font-family: '20Kopeek-book';
+      }
+      .n_img{
+        margin-top: 3.472vw;
+        img{
+          width: 54.861vw;
+        }
+      }
+    }
+    .lents{
+      margin-bottom: 4.167vw;
+      h2{
+        margin-left: 0;
+        margin-top: 11.111vw;
+        font-size: 1.389vw;
+        color: #ECE1CF;
+        font-family: '20Kopeek-bold';
+      }
+      p{
+        margin-top: 3.472vw;
+        width: 26vw;
+        font-size: 1.389vw;
+        color: #ECE1CF;
+        font-family: '20Kopeek-book';
+      }
+      .l_img{
+        margin-top: 3.472vw;
+        img{
+          width: 54.861vw;
+        }
+      }
+    }
+  }
+}
+.comp_logo{
+  background: #ECE1CF;
+  .allinside_5{
+    margin-left: 27vw;
+    .fst{
+      .use{
+        h2{
+          margin-left: 0;
+          margin-top: 11.111vw;
+          font-size: 1.389vw;
+          color: #000;
+          font-family: '20Kopeek-bold';
+        }
+        p{
+          margin-top: 3.472vw;
+          width: 26vw;
+          font-size: 1.389vw;
+          color: #000;
+          font-family: '20Kopeek-book';
+        }
+      }
+      .use_p{
+        margin-top: 3.472vw;
+        img{
+          width: 60.3vw;
+        }
+      }
+    }
+    .scnd{
+      display: flex;
+      flex-direction: row;
+      .use_m{
+        h2{
+          margin-left: 0;
+          margin-top: 11.111vw;
+          font-size: 1.389vw;
+          line-height: 120%;
+          color: #000;
+          font-family: '20Kopeek-bold';
+        }
+        p{
+          margin-top: 3.472vw;
+          width: 26vw;
+          font-size: 1.389vw;
+          color: #000;
+          font-family: '20Kopeek-book';
+        }
+      }
+      .eyes_l{
+        margin-top: 11.111vw;
+        margin-left: 9.722vw;
+        img{
+          width: 24.306vw;
+        }
+      }
+    }
+    .thrd{
+      h2{
+        margin-left: 0;
+        margin-top: 11.111vw;
+        font-size: 1.389vw;
+        line-height: 120%;
+        color: #000;
+        font-family: '20Kopeek-bold';
+      }
+      p{
+        margin-top: 3.472vw;
+        width: 26vw;
+        font-size: 1.389vw;
+        color: #000;
+        font-family: '20Kopeek-book';
+      }
+      .thrd_exmpls{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 4.167vw;
+        .asmain{
+          h2{
+            margin-left: 0;
+            margin-top: 11.111vw;
+            font-size: 1.389vw;
+            line-height: 120%;
+            color: #000;
+            font-family: '20Kopeek-bold';
+          }
+          p{
+            margin-top: 3.472vw;
+            width: 26vw;
+            font-size: 1.389vw;
+            color: #000;
+            font-family: '20Kopeek-book';
+          }
+        }
+        .asother{
+          margin-left: 9.722vw;
+          h2{
+            margin-left: 0;
+            margin-top: 11.111vw;
+            font-size: 1.389vw;
+            line-height: 120%;
+            color: #000;
+            font-family: '20Kopeek-bold';
+          }
+          p{
+            margin-top: 3.472vw;
+            width: 26vw;
+            font-size: 1.389vw;
+            color: #000;
+            font-family: '20Kopeek-book';
+          }
+        }
+      }
+    }
+  }
+}
+.composition{
+  background: #000;
+  .allinside_6{
+    margin-left: 27vw;
+    .differs{
+      h2{
+        margin-left: 0;
+        margin-top: 11.111vw;
+        font-size: 1.389vw;
+        line-height: 120%;
+        color: #ECE1CF;;
+        font-family: '20Kopeek-bold';
+      }
+      p{
+        margin-top: 3.472vw;
+        width: 26vw;
+        font-size: 1.389vw;
+        color: #ECE1CF;;
+        font-family: '20Kopeek-book';
+      }
+    }
+    .radial{
+      .all_r{
+        display: flex;
+        flex-direction: row;
+        .r_s{
+          margin-top: 11.111vw;
+          img{
+            width: 26.389vw;
+          }
+        }
+        .about_rs{
+          margin-left: 9.722vw;
+          h2{
+            margin-left: 0;
+            margin-top: 11.111vw;
+            font-size: 1.389vw;
+            line-height: 120%;
+            color: #ECE1CF;;
+            font-family: '20Kopeek-bold';
+          }
+          p{
+            margin-top: 3.472vw;
+            width: 26vw;
+            font-size: 1.389vw;
+            color: #ECE1CF;;
+            font-family: '20Kopeek-book';
+          }
+        }
+      }
+    }
+    .radial_c{
+      h2{
+        margin-left: 0;
+        margin-top: 11.111vw;
+        font-size: 1.389vw;
+        line-height: 120%;
+        color: #ECE1CF;;
+        font-family: '20Kopeek-bold';
+      }
+      .rc{
+        margin-top: 3.472vw;
+        img{
+          width: 54.861vw;
+        }
+      }
+    }
+    .classic{
+      h2{
+        margin-left: 0;
+        margin-top: 11.111vw;
+        font-size: 1.389vw;
+        line-height: 120%;
+        color: #ECE1CF;;
+        font-family: '20Kopeek-bold';
+      }
+      .params{
+        display: flex;
+        flex-direction: row;
+        .scnd_c{
+          margin-left: 9.722vw;
+        }
+        p{
+          margin-top: 3.472vw;
+          width: 26vw;
+          font-size: 1.389vw;
+          color: #ECE1CF;;
+          font-family: '20Kopeek-book';
+        }
+      }
+      .cl_c{
+        margin-top: 3.472vw;
+        img{
+          width: 54.861vw;
+        }
+      }
+    }
+    .double{
+      h2{
+        margin-left: 0;
+        margin-top: 11.111vw;
+        font-size: 1.389vw;
+        line-height: 120%;
+        color: #ECE1CF;;
+        font-family: '20Kopeek-bold';
+      }
+      p{
+        margin-top: 3.472vw;
+        width: 26vw;
+        font-size: 1.389vw;
+        color: #ECE1CF;;
+        font-family: '20Kopeek-book';
+      }
+      .double_c{
+        margin-top: 3.472vw;
+        img{
+          width: 54.861vw;
+        }
+      }
+    }
+    .mobile{
+      h2{
+        margin-left: 0;
+        margin-top: 11.111vw;
+        font-size: 1.389vw;
+        line-height: 120%;
+        color: #ECE1CF;;
+        font-family: '20Kopeek-bold';
+      }
+      .mobile_c{
+        display: flex;
+        flex-direction: row;
+        .clsc{
+          p{
+            margin-top: 3.472vw;
+            width: 26vw;
+            font-size: 1.389vw;
+            color: #ECE1CF;;
+            font-family: '20Kopeek-book';
+          }
+          .m_c{
+            margin-top: 5.2vw;
+            img{
+              width: 26vw;
+            }
+          }
+        }
+        .rdl{
+          margin-left: 9.722vw;
+          p{
+            margin-top: 3.472vw;
+            width: 26vw;
+            font-size: 1.389vw;
+            color: #ECE1CF;;
+            font-family: '20Kopeek-book';
+          }
+          .m_c1{
+            margin-top: 3.472vw;
+            img{
+              width: 26vw;
+            }
+          }
+        }
+      }
+    }
+    .poster{
+      h2{
+        margin-left: 0;
+        margin-top: 11.111vw;
+        font-size: 1.389vw;
+        line-height: 120%;
+        color: #ECE1CF;;
+        font-family: '20Kopeek-bold';
+      }
+      .poster_c{
+            margin-bottom: 4.167vw;
+        display: flex;
+        flex-direction: row;
+        .clsc{
+          p{
+            margin-top: 3.472vw;
+            width: 26vw;
+            font-size: 1.389vw;
+            color: #ECE1CF;;
+            font-family: '20Kopeek-book';
+          }
+          .p_c{
+            margin-top: 3.472vw;
+            img{
+              width: 26vw;
+            }
+          }
+        }
+        .rdl{
+          margin-left: 9.722vw;
+          p{
+            margin-top: 3.472vw;
+            width: 26vw;
+            font-size: 1.389vw;
+            color: #ECE1CF;;
+            font-family: '20Kopeek-book';
+          }
+          .p_c1{
+            margin-top: 6.772vw;
+            img{
+              width: 26vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.identity{
+  background: #000;
+  .allinside_7{
+    margin-left: 27vw;
+    margin-bottom: 4.167vw;
+    h2{
+      margin-left: 0;
+      margin-top: 11.111vw;
+      font-size: 1.389vw;
+      line-height: 120%;
+      color: #ECE1CF;;
+      font-family: '20Kopeek-bold';
+    }
+    img{
+      width: 65vw;
+      margin-top: 3.472vw;
+    }
+  }
+}
+footer{
+  background: #000;
+  display: flex;
+  justify-content: center;
+  img{
+    margin-top: 4.167vw;
+    width: 11.806vw;
+    margin-bottom: 4.167vw;
+  }
+}

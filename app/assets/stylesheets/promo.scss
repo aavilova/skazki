@@ -1,0 +1,243 @@
+
+@mixin back {
+  background-color: transparent; border: none; decoration: none;
+}
+$red: #CD4223;
+$black: #000;
+$white: #ECE1CF;
+$left-margin: 4.167vw 0 0 4.167vw;
+$margin: 4.167vw;
+$form_margin: 1.597vw 2.986vw;
+
+* {
+  box-sizing:border-box;
+}
+
+body {
+  font-family: 'Proxima Nova';
+  margin: 0;
+}
+.three, .one {
+  height: 100vh;
+  background-color: $red;
+}
+.two{
+  height: 100vh;
+  background-color: $black;
+  display: flex;
+  flex-direction: row;
+}
+.main{
+  margin-top: 3vw;
+}
+
+section {
+  overflow: hidden;
+  width: 100vw;
+  position: relative;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .descr {
+    position: relative;
+    z-index: 5;
+    h1{
+      color: $white;
+      font-size: 16.667vw;
+      line-height: 100%;
+      font-weight: 800;
+      margin-left: $margin;
+      margin-top: -$margin *8;
+    }
+    h3 {
+      font-size: 2.6vw;
+      color: $white;
+      margin-left: $margin * 1.05;
+      margin-top: -$margin *3.8;
+      font-weight: 600;
+    }
+  }
+  h2{
+    margin: $left-margin;
+    color: $black;
+    font-size: 7.361vw;
+    line-height: 90%;
+    font-weight: 800;
+    font-style: normal;
+    position: relative;
+    display: inline-block;
+  }
+  .subscribe{
+    margin-top: $margin * 2;
+  }
+  .larets{
+    color: $white;
+    font-size: 2.222vw;
+    line-height: 115%;
+    width: 39vw;
+    font-weight: 400;
+    margin-left: -$margin * 8.2;
+    margin-top: $margin * 5.2;
+  }
+  header{
+    width: 100vw;
+    height: 4.167vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    h4{
+      font-size: 2.222vw;
+      line-height: 80%;
+      text-align: center;
+      color: $black;
+      margin-left: $margin;
+      margin-right: $margin;
+      font-weight: 700;
+    }
+  }
+  form {
+    width: 45.139vw;
+    height: 4.861vw;
+    margin-left: $margin;
+    margin-top: -1vw;
+    background: $black;
+    border-radius: 3.264vw;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    input[type="email"] {
+      @include back;
+      font-size: 1.5vw;
+      line-height: 100%;
+      color: rgba(236, 225, 207, 0.7);
+      margin: $form_margin;
+      font-weight: 400;
+      border: none;
+    }
+    input[type="email"]:focus {
+      outline-width: 0;
+      outline: none;
+      appearance: none;
+      -webkit-appearance: none;
+      -webkit-writing-mode: none ;
+    }
+    input[type="submit"] {
+      @include back;
+      font-size: 1.944vw;
+      line-height: 100%;
+      font-weight: 400;
+      color: $white;
+      margin-right: 2.92vw;
+      cursor: pointer;
+    }
+  }
+  .images{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 2;
+    .c1{
+      margin-left: -$margin * 2;
+      margin-top: -$margin * .5;
+      img{
+        width: 41.667vw;
+        height: auto;
+      }
+    }
+    .quote1 {
+      margin-top: $margin * 3.5;
+      margin-left: -$margin * 2;
+      img{
+        width: 26.736vw;
+        height: auto;
+      }
+    }
+    .quote2 {
+      margin-left: -$margin;
+      margin-top: $margin * 5.8;
+      img{
+        width: 30vw;
+        height: auto;
+      }
+    }
+    .c2{
+      img{
+        margin-left: -$margin * 4;
+        margin-top: $margin * 4;
+        width: 41.667vw;
+        height: auto;
+      }
+    }
+  }
+  .c_3{
+    img{
+      width: 44vw;
+      height: auto;
+      margin-top: $margin * 3;
+      margin-left: $margin * .5;
+    }
+  }
+  .quote3{
+    img{
+      width: 41.042vw;
+      height: auto;
+      margin-top: $margin * 3;
+      margin-left: -$margin * 1.4;
+    }
+  }
+  .quote4{
+    margin-top: 2vw;
+    margin-left: 38.5vw;
+    margin-bottom: .7vw;
+    img{
+      width: 41.042vw;
+      height: auto;
+    }
+  }
+  .opacity{
+    opacity: 0;
+    transition: .5s;
+  }
+  .quote4_a{
+    top: 24.5vw;
+    margin-left: 38.5vw;
+    margin-bottom: .7vw;
+    position: absolute;
+    z-index: 10;
+    opacity: 0;
+    img{
+      width: 41.042vw;
+      height: auto;
+    }
+  }
+  .opacity_a{
+    opacity: 1;
+    transition: .5s;
+  }
+  .down{
+    margin-top: -1vw;
+    margin-left: $margin;
+    display: flex;
+    flex-direction: row;
+    .icons{
+      margin-top: 16vw;
+      img{
+        margin-right: 1.389vw;
+      }
+    }
+    .c_4{
+      margin-left: 52vw;
+      margin-top: -8vw;
+      img{
+        width: 28vw;
+        height: auto;
+      }
+    }
+  }
+}

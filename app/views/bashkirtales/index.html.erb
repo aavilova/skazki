@@ -1,0 +1,20 @@
+<section class="bashkirtales">
+  <div class="b_tales">
+    <div class="about">
+      <h1>Башкирские <br>сказки</h1>
+      <p>Лучшие башкирские сказки для&nbsp;детей и&nbsp;взрослых, которые могут как&nbsp;уму-разуму научить, так&nbsp;и&nbsp;просто позабавить</p>
+    </div>
+    <div class="flvrs">
+      <%= image_tag "bts.svg" %>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="tales">
+    <%= react_component 'O_Allbooks', posts: @posts %>
+  </div>
+  <div class="infifniteload">
+    <%= image_tag "infifniteload.svg" %>
+  </div>
+</section>

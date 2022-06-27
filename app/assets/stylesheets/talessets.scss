@@ -1,0 +1,218 @@
+// Place all the styles related to the Talessets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.skazka{
+  .set_1:hover{
+    .spin{
+      .circle1, .circle2{
+        animation-play-state: running;
+      }
+    }
+  }
+  .set_2:hover{
+    .spin{
+      .circle1, .circle2{
+        animation-play-state: running;
+      }
+    }
+  }
+  .set_1{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 89.583vw;
+    height: 27.778vw;
+    overflow: hidden;
+    background: #2D517F;
+    margin-bottom: 4.167vw;
+    .spin{
+      .circle1{
+        display: inline-block;
+        position: absolute;
+        left: 28vw;
+        top: -23vw;
+        img{
+          width: 72.917vw;
+        }
+        -webkit-animation: rotate 17s linear infinite;
+        animation: rotate 17s linear infinite;
+        animation-play-state: paused;
+      }
+      .circle2{
+        display: inline-block;
+        position: absolute;
+        left: 43vw;
+        top: -14vw;
+        img{
+          width: 55.556vw;
+        }
+        -webkit-animation: rotateback 11s linear infinite;
+        animation: rotateback 11s linear infinite;
+        animation-play-state: paused;
+      }
+      .eyeball{
+        width: 9.028vw;
+        height: 6.944vw;
+        position: absolute;
+        top: 11.5vw;
+        left: 67vw;
+        .eye{
+          width: 6.944vw;
+          height: 4.861vw;
+          border-radius: 50%;
+          background: #ECE1CF;
+          overflow: hidden;
+          .puppilll{
+            position: relative;
+            width: 1.389vw;
+            height: 4.514vw;
+            border-radius: 50%;
+            background: #2D517F;
+            left: auto;
+            top: auto;
+          }
+        }
+      }
+    }
+    .descr{
+      height: 100%;
+      padding: 2.431vw 3.819vw;
+      display: inline-block;
+      h1{
+        margin-left: 0;
+        font-family: '21 Cent';
+        font-style: italic;
+        font-weight: 400;
+        font-size: 4.028vw;
+        line-height: 90%;
+        color: #ECE1CF;
+        margin-top: 0;
+        margin-bottom: 1.042vw;
+      }
+      p{
+        width: 18vw;
+        font-family: 'Proxima Nova';
+        font-weight: 400;
+        font-size: 1.250vw;
+        line-height: 120%;
+        color: #ECE1CF;
+      }
+      a{
+          position: absolute;
+          bottom: 2.431vw;
+          width: 8.9vw;
+          height: 3.194vw;
+          border: 1px solid #ECE1CF;
+          box-sizing: border-box;
+          border-radius: 6.042vw;
+          background: transparent;
+          padding: 0.972vw 2.153vw;
+          font-family: 'Proxima Nova';
+          font-weight: 400;
+          font-size: 1.389vw;
+          line-height: 90%;
+          color: #ECE1CF;
+      }
+    }
+  }
+
+  .set_2{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 89.583vw;
+    height: 27.778vw;
+    overflow: hidden;
+    background: #003E33;
+    margin-bottom: 4.167vw;
+    .spin{
+      .circle1{
+        display: inline-block;
+        position: absolute;
+        left: 28vw;
+        top: -23vw;
+        img{
+          width: 72.917vw;
+        }
+        -webkit-animation: rotate 11s linear infinite;
+        animation: rotate 17s linear infinite;
+        animation-play-state: paused;
+      }
+      .circle2{
+        display: inline-block;
+        position: absolute;
+        left: 43vw;
+        top: -14vw;
+        img{
+          width: 55.556vw;
+        }
+        -webkit-animation: rotateback 15s linear infinite;
+        animation: rotateback 11s linear infinite;
+        animation-play-state: paused;
+      }
+      .eyeball{
+        width: 9.028vw;
+        height: 6.944vw;
+        position: absolute;
+        top: 11.5vw;
+        left: 67vw;
+        .eye{
+          width: 6.944vw;
+          height: 4.861vw;
+          border-radius: 50%;
+          background: #ECE1CF;
+          overflow: hidden;
+          .puppilll{
+            position: relative;
+            width: 1.389vw;
+            height: 4.514vw;
+            border-radius: 50%;
+            background: #003E33;
+            left: auto;
+            top: auto;
+          }
+        }
+      }
+    }
+    .descr{
+      height: 100%;
+      padding: 2.431vw 3.819vw;
+      display: inline-block;
+      h1{
+        margin-left: 0;
+        font-family: '21 Cent';
+        font-style: italic;
+        font-weight: 400;
+        font-size: 4.028vw;
+        line-height: 90%;
+        color: #ECE1CF;
+        margin-top: 0;
+        margin-bottom: 1.042vw;
+      }
+      p{
+        width: 18vw;
+        font-family: 'Proxima Nova';
+        font-weight: 400;
+        font-size: 1.250vw;
+        line-height: 120%;
+        color: #ECE1CF;
+      }
+      a{
+          position: absolute;
+          bottom: 2.431vw;
+          width: 8.9vw;
+          height: 3.194vw;
+          border: 1px solid #ECE1CF;
+          box-sizing: border-box;
+          border-radius: 6.042vw;
+          background: transparent;
+          padding: 0.972vw 2.153vw;
+          font-family: 'Proxima Nova';
+          font-weight: 400;
+          font-size: 1.389vw;
+          line-height: 90%;
+          color: #ECE1CF;
+      }
+    }
+  }
+}

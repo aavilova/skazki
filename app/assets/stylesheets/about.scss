@@ -1,0 +1,334 @@
+$red: #CD4223;
+$black: #000;
+$white: #ECE1CF;
+$margin-about: 6.25vw 10.556vw;
+$text-margin: 4.861vw;
+
+body {
+  font-family: 'Proxima Nova';
+}
+section{
+  overflow: hidden;
+  width: 100vw;
+  position: relative;
+}
+.first{
+  height: 100vh;
+  background-color: $black;
+  background: {
+     image: asset_url("section1.svg");
+  }
+  background-size: 100%;
+  background-position: center;
+  .mainpage{
+    margin: 10.556vw 4.167vw;
+    margin-top: 35.5vw;
+    h1{
+      color: $white;
+      font-size: 16.667vw;
+      line-height: 100%;
+      font-weight: 800;
+      margin-bottom: 0;
+    }
+    h3 {
+      font-size: 2.6vw;
+      color: $white;
+      margin-top: -30px;
+      font-weight: 600;
+    }
+  }
+}
+.second{
+  height: 100vh;
+  background-color: $white;
+  background: {
+     image: asset_url("section2.svg");
+  }
+  background-size: 100%;
+  background-position: center;
+  .textblock2{
+    margin: $margin-about;
+    h2{
+      margin: 0;
+    }
+    .blackhead{
+      color: $black;
+    }
+    .about{
+      color: $black;
+      font-size: 2.361vw;
+      line-height: 125%;
+      font-weight: 600;
+      width: 54.167vw;
+      margin-top: $text-margin;
+    }
+  }
+}
+.third{
+  height: 100vh;
+  background-color: $black;
+  .pics3{
+    margin: $margin-about;
+    display: flex;
+    flex-direction: row;
+    .quote_3{
+      img{
+        width: 62.292vw;
+        height: auto;
+      }
+    }
+    .c_3{
+      margin-left: -9vw;
+      margin-top: 8vw;
+      img{
+        width: 35vw;
+        height: auto;
+      }
+    }
+  }
+}
+.forth{
+  height: 100vh;
+  background-color: $white;
+  background: {
+     image: asset_url("section4.svg");
+  }
+  background-size: 100%;
+  background-position: center;
+  .textblock4{
+    margin: $margin-about;
+    h2{
+      margin: 0;
+    }
+    .blackhead{
+      color: $black;
+    }
+    .define{
+      margin: $text-margin 0;
+      color: $black;
+      font-size: 2.361vw;
+      line-height: 125%;
+      font-weight: 600;
+      width: 54vw;
+    }
+  }
+}
+.fifth{
+  height: 100vh;
+  background-color: $red;
+  .pics5{
+    margin: $margin-about;
+    display: flex;
+    flex-direction: row;
+    .quote5{
+      margin-left: -18vw;
+      img{
+        width: 66.389vw;
+        height: auto;
+      }
+    }
+    .c5{
+      margin-top: 13vw;
+      margin-left: -18vw;
+      img{
+        width: 50vw;
+        height: auto;
+      }
+    }
+  }
+}
+.sixth{
+  height: 100vh;
+  background-color: $black;
+  background: {
+     image: asset_url("section6.svg");
+  }
+  background-size: 100%;
+  background-position: center;
+  .textblock6{
+    margin: $margin-about;
+    h2{
+      font-size: 6.667vw;
+      font-weight: 600;
+      line-height: 88%;
+      margin: 0;
+    }
+    .whitehead{
+      color: $white;
+    }
+    .statistic{
+      margin: $text-margin 0;
+      color: $white;
+      font-size: 2.361vw;
+      line-height: 125%;
+      font-weight: 600;
+      width: 54vw;
+    }
+    h6{
+      color: $white;
+      font-size: 1.667vw;
+      font-weight: 600;
+      margin: 0;
+    }
+    .question{
+      color: $white;
+      margin: 18px 0;
+      font-size: 1.389vw;
+      font-weight: 300;
+      line-height: 125%;
+    }
+    .answers{
+      margin-top: 2.778vw;
+      display: flex;
+      flex-direction: row;
+      .yes{
+        display: flex;
+        flex-direction: row;
+        .form1{
+          width: 1.736vw;
+          height: 1.736vw;
+          background-color: $red;
+          border-radius: 50%;
+        }
+        .txt{
+          margin-left: 1vw;
+          font-size: 1.389vw;
+          font-weight: 600;
+          line-height: 125%;
+          color: $white;
+        }
+      }
+      .no{
+        margin-left: 2vw;
+        display: flex;
+        flex-direction: row;
+        .form2{
+          width: 1.736vw;
+          height: 1.736vw;
+          background-color: $white;
+          border-radius: 50%;
+        }
+        .txt{
+          margin-left: 1vw;
+          font-size: 1.389vw;
+          font-weight: 600;
+          line-height: 125%;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+.seventh{
+  height: 100vh;
+  background-color: $white;
+  .blackhead{
+    margin: $margin-about;
+    color: $black;
+  }
+  .pics7{
+    display: flex;
+    flex-direction: row;
+    margin-top: -$text-margin;
+    .quote7{
+      margin-left: 10.556vw;
+      position: relative;
+      z-index: 6;
+      img{
+        width: 60.764vw;
+        height: auto;
+      }
+    }
+    .c7{
+      position: relative;
+      z-index: 5;
+      margin-left: -21vw;
+      margin-top: -16.556vw;
+      img{
+        width: 50vw;
+        height: auto;
+      }
+    }
+  }
+}
+.eighth{
+  height: 100vh;
+  background-color: $black;
+  background: {
+     image: asset_url("section8.svg");
+  }
+  background-size: 100%;
+  background-position: center;
+  .textblock8{
+    margin: $margin-about;
+    h2{
+      font-size: 6.667vw;
+      font-weight: 600;
+      line-height: 88%;
+      margin: 0;
+    }
+    .whitehead{
+      color: $white;
+    }
+    .list{
+      margin-top: $text-margin;
+      display: flex;
+      flex-direction: row;
+      ul{
+        margin-right: 10.069vw;
+        li{
+          color: $white;
+          font-size: 2.361vw;
+          line-height: 125%;
+          font-weight: 600;
+          margin: 15px 0;
+        }
+      }
+    }
+  }
+}
+.ninth{
+  height: 100vh;
+  background-color: $red;
+  height: 50vh;
+  footer{
+    margin: 4.167vw;
+    .people{
+      display: flex;
+      flex-direction: row;
+      .curator{
+        margin-left: 23.5vw;
+      }
+      h5{
+        font-size: 1.944vw;
+        font-weight: 600;
+        margin-top: 0;
+        margin-bottom: 1.736vw;
+        color: $black;
+        width: auto;
+      }
+      .names{
+        font-size: 1.528vw;
+        line-height: 125%;
+        margin-top: 0;
+        margin-left: 0;
+        color: $black;
+        width: auto;
+      }
+    }
+    .year{
+      margin-top: 6.944vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .years{
+        width: auto;
+        font-size: 1.389vw;
+        font-weight: 600;
+        margin-top: 0;
+        margin-left: 0;
+        color: $black;
+      }
+    }
+  }
+}

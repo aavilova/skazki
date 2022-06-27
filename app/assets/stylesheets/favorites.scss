@@ -1,0 +1,161 @@
+// Place all the styles related to the favorites controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.taleitself{
+  .bckgr{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    top: -29vw;
+    left: -58.5vw;
+    align-items: baseline;
+    .left, .right{
+      img{
+        width: 110.481vw;
+      }
+    }
+    .bckgrflvrs{
+      .bacgrleafs{
+        width: 160.528vw;
+        display: flex;
+        position: absolute;
+        justify-content: space-around;
+        z-index: 4;
+        top: 7vw;
+        .leftleaf{
+          animation: lfleft 6s infinite;
+        }
+        .rightleaf{
+          animation: lfright 6s infinite;
+        }
+      }
+      width: 126.528vw;
+      display: flex;
+      position: absolute;
+      justify-content: space-around;
+      z-index: 3;
+      top: 25vw;
+      .rightflvr, .leftflvr{
+        img{
+          width: 45.889vw;
+        }
+      }
+    }
+    .rightflvr{
+      animation: rotateright 10s infinite;
+    }
+    .leftflvr{
+      animation: rotateleft 10s infinite;
+    }
+    .left{
+      animation: rotate1 8s infinite;
+    }
+    .right{
+      margin-top: 4vw;
+      animation: rotate2 8s infinite;
+    }
+  }
+  .else{
+    margin-left: 19vw;
+    width: 62vw;
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6.944vw;
+    .favs{
+      display: flex;
+      form{
+        width: auto;
+        height: auto;
+        background: transparent;
+        margin: 0;
+        input{
+          width: 1.611vw;
+          height: 2.25vw;
+          background-size: 100%;
+          background-position: center;
+          background:{
+            image: asset_url("unsaved.svg");
+          }
+        }
+        .dislike{
+          width: 1.611vw;
+          height: 2.25vw;
+          background-size: 100%;
+          background-position: center;
+          background:{
+            image: asset_url("saved.svg");
+          }
+        }
+      }
+      .sharing{
+        margin-right: 2.778vw;
+        cursor: pointer;
+        width: 1.611vw;
+        height: 1.95vw;
+        background-size: 100%;
+        background-position: center;
+        background:{
+          image: asset_url("sharelinks.svg");
+        }
+      }
+    }
+    .tags{
+      display: flex;
+      .tag{
+        display: flex;
+        justify-items: center;
+        width: auto;
+        height: 2.986vw;
+        border-radius: 6.944vw;
+        margin-left: 1.389vw;
+        p{
+          padding: 0.694vw 1.6vw;
+          font-size: 1.250vw;
+          margin: 0;
+        }
+      }
+      .scary{
+        background: #2D517F;
+        p{
+          font-family: 'Proxima Nova';
+          color: #ECE1CF;
+        }
+      }
+      .true{
+        background: #D84E00;
+        p{
+          font-family: 'Proxima Nova';
+          color: #ECE1CF;
+        }
+      }
+    }
+    .edition{
+      display: flex;
+      .editt{
+        width: 14vw;
+      }
+      .delete{
+        width: 10vw;
+      }
+      .editt, .delete{
+        margin-right: 1.389vw;
+        border: 1px solid #ECE1CF;
+        height: 3.333vw;
+        border-radius: 6vw;
+        display: flex;
+        justify-content: center;
+        a{
+          font-family: 'Proxima Nova';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 1.389vw;
+          line-height: 89.84%;
+          color: #ECE1CF;
+          margin-top: 1vw;
+        }
+      }
+    }
+  }
+}

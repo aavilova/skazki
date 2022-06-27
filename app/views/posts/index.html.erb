@@ -1,0 +1,28 @@
+<section class="skazka">
+  <h3>Здесь вы найдете все сказки и подборки, <br>которые доступны на данный момент</h3>
+
+  <div class="change_set">
+    <button class="talesb active_b" type="button" name="button"><%= link_to 'Сказки', posts_path %></button>
+    <button class="taless" type="button" name="button"><%= link_to 'Подборки', talessets_path %></button>
+  </div>
+  <div class="options">
+    <div class="filter">
+      <p class="sortby">Фильтровать по:</p>
+      <p>Народ</p>
+      <p>Регион</p>
+      <p>Возрастной рейтинг</p>
+    </div>
+    <% if user_signed_in? && current_user.isadmin == true %>
+    <div class="add">
+      <%= link_to 'Новый пост', new_post_path %>
+    </div>
+    <% end %>
+  </div>
+
+  <div class="library_tales">
+    <%= react_component 'O_Allbooks', posts: @posts %>
+  </div>
+   <div class="infifniteload">
+     <%= image_tag "infifniteload.svg" %>
+   </div>
+</section>

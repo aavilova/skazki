@@ -1,0 +1,23 @@
+<section class="tatartales">
+  <div class="t_tales">
+    <div class="about">
+      <h1>Татарские <br>сказки</h1>
+      <p>Лучшие татарские сказки для&nbsp;детей и&nbsp;взрослых, которые могут как&nbsp;уму-разуму научить, так&nbsp;и&nbsp;просто позабавить</p>
+    </div>
+    <div class="flvrs">
+      <%= image_tag "tatflvrs1.svg" %>
+      <div class="flvrs_in">
+        <%= image_tag "tatflvrs2.svg" %>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="tales">
+    <%= react_component 'O_Allbooks', posts: @posts %>
+  </div>
+  <div class="infifniteload">
+    <%= image_tag "infifniteload.svg" %>
+  </div>
+</section>

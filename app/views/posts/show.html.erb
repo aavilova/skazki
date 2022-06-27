@@ -1,0 +1,88 @@
+<div class="textsettings"></div>
+
+<section class="taleitself">
+  <div class="textedit">
+    <div class="bg_color">
+      <p>Тема</p>
+      <div class="light"></div>
+      <div class="dark"></div>
+    </div>
+    <div class="font_size">
+      <p>Шрифт</p>
+      <div class="edits">
+        <p class="minus">-</p>
+        <p>Aa</p>
+        <p class="plus">+</p>
+      </div>
+    </div>
+  </div>
+  <div class="bckgr">
+    <div class="left">
+      <%= image_tag "bacgrleft.svg" %>
+    </div>
+    <div class="bckgrflvrs">
+      <div class="leftflvr">
+        <%= image_tag "flvrbgl.svg" %>
+      </div>
+      <div class="bacgrleafs">
+        <div class="leftleaf">
+          <%= image_tag "leafsleft.svg" %>
+        </div>
+        <div class="rightleaf">
+          <%= image_tag "leafsright.svg" %>
+        </div>
+      </div>
+      <div class="rightflvr">
+        <%= image_tag "flvrbgr.svg" %>
+      </div>
+    </div>
+    <div class="right">
+      <%= image_tag "bacgrright.svg" %>
+    </div>
+  </div>
+  <section>
+    <div class="postarch"></div>
+    <div class="content">
+      <%= react_component 'O_The_tale', post: @post %>
+      <div class="else">
+          <div class="favs">
+           <% if user_signed_in? && current_user.isadmin == false %>
+            <% pre_favorite = @post.favorites.find { |favorite| favorite.user_id == current_user.id} %>
+              <% if pre_favorite %>
+                  <%= button_to '', post_favorite_path(@post, pre_favorite), class: "dislike", method: :delete %>
+              <% else %>
+                  <%= button_to '', post_favorites_path(@post), method: :post %>
+              <% end %>
+          <% end %>
+          <% if user_signed_in? && current_user.isadmin == false %>
+            <div class="sharing"></div>
+          <% end %>
+        </div>
+        
+        <% if user_signed_in? && current_user.isadmin == false %>
+          <div class="tags">
+            <div class="tag scary">
+              <p>Страшная</p>
+            </div>
+            <div class="tag true">
+              <p>Поучительная</p>
+            </div>
+          </div>
+        <% end %>
+
+
+
+        <% if user_signed_in? && current_user.isadmin == true %>
+          <div class="edition">
+            <div class="editt">
+              <%= link_to 'Редактировать', edit_post_path(@post) %>
+            </div>
+            <div class="delete">
+              <%= link_to 'Удалить', @post, method: :delete %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </section>
+</section>

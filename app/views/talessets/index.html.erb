@@ -1,0 +1,60 @@
+<section class="skazka">
+  <h3>Здесь вы найдете все сказки и подборки, <br>которые доступны на данный момент</h3>
+
+  <div class="change_set">
+    <button class="talesb_a" type="button" name="button"><%= link_to 'Сказки', posts_path %></button>
+    <button class="taless_a" type="button" name="button"><%= link_to 'Подборки', talessets_path %></button>
+  </div>
+  <div class="filter">
+    <p class="sortby">Фильтровать по:</p>
+    <p>Народ</p>
+    <p>Регион</p>
+    <p>Возрастной рейтинг</p>
+  </div>
+
+  <div class="set_1">
+    <div class="descr">
+      <h1>Татарские <br>сказки</h1>
+      <p>Лучшие татарские сказки для&nbsp;детей и&nbsp;взрослых, которые могут как&nbsp;уму-разуму научить, так&nbsp;и&nbsp;просто позабавить</p>
+      <%= link_to 'Читать', tatartales_path %>
+    </div>
+    <div class="spin">
+      <div class="circle1">
+        <%= image_tag "circle1.svg" %>
+      </div>
+      <div class="circle2">
+        <%= image_tag "circle2.svg" %>
+      </div>
+      <div class="eyeball">
+        <div class="eye">
+          <div class="puppilll"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="set_2">
+    <div class="descr">
+      <h1>Башкирские <br>сказки</h1>
+      <p>Лучшие башкирские сказки для&nbsp;детей и&nbsp;взрослых, которые могут как&nbsp;уму-разуму научить, так&nbsp;и&nbsp;просто позабавить</p>
+      <%= link_to 'Читать', bashkirtales_path %>
+    </div>
+    <div class="spin">
+      <div class="circle1">
+        <%= image_tag "circle1_1.svg" %>
+      </div>
+      <div class="circle2">
+        <%= image_tag "circle2_1.svg" %>
+      </div>
+      <div class="eyeball">
+        <div class="eye">
+          <div class="puppilll"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <div class="infifniteload">
+     <%= image_tag "infifniteload.svg" %>
+   </div>
+</section>

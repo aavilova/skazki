@@ -1,0 +1,89 @@
+<% if user_signed_in? && current_user.isadmin == true %>
+<section class="postssection">
+
+  <% if user_signed_in? && current_user.isadmin == true %>
+    <div class="admin_panel">
+      <div class="all_links">
+
+        <%= link_to 'Главная', userview_path %>
+        <%= link_to 'Посты', posts_path, class: "chosen"  %>
+        <%= link_to 'Подборки'%>
+        <%= link_to 'Пользователи', users_path%>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="content_for_all">
+
+    <div class="head_button">
+
+      <% if user_signed_in? && current_user.isadmin == true %>
+      <div class="left_links">
+        <div class="link_newpost">
+            <%= link_to 'Новый пост', new_post_path %>
+        </div>
+        <div class="sort_by_status">
+          <% Status.all.each do |status| %>
+           <%= link_to status.name, posts_path(status: status.name) %>
+          <% end %>
+        </div>
+
+      </div>
+      <% end %>
+      <div class="search">
+        <%= form_tag posts_path, :method => 'get' do %>
+            <%= text_field_tag :starts_with, params[:starts_with], placeholder: "Поиск"  %>
+            <%= submit_tag "", :name => nil %>
+        <% end %>
+      </div>
+    </div>
+
+
+    <div class="filter_panel">
+        <div class="sort_by">
+          Сортировать по:
+        </div>
+        <div class="cathegories">
+          <p>Последние</p>
+          <p>Народы</p>
+          <p>Регионы</p>
+          <p>Тэги</p>
+        </div>
+    </div>
+
+    <section class="postsection">
+
+      <div class="list_head">
+        <div class="name">
+          <p>Название</p>
+        </div>
+        <div class="nation">
+          <p>Народность</p>
+        </div>
+        <div class="s_author">
+          <p>Автор</p>
+        </div>
+        <div class="s_status">
+          <p>Статус</p>
+        </div>
+        <div class="date">
+          <p>Дата&nbsp;публикации</p>
+        </div>
+      </div>
+
+      <% @posts.each do |post| %>
+      <div class="list_body">
+
+        <div class="name_s"><%= link_to post.name, post %></div>
+        <div class="nation_s"><%= post.title %></div>
+        <div class="author_s"><%= post.author %></div>
+        <div class="status"><%= post.status.name %></div>
+        <div class="date_s"><%= post.created_at.strftime("%-d.%-m.%y %H:%M") %></div>
+      </div>
+      <% end %>
+
+    </section>
+
+  </div>
+</section>
+<% end %>
